@@ -1,2 +1,0 @@
-# connorwithhonorai
-CWH AI
