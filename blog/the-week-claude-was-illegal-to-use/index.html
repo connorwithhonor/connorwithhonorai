@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Week Claude Was Illegal to Use | Connor MacIvor</title>
+<meta name="description" content="For 18 days this summer, the most capable version of a leading AI model was against the law to use inside the United States, treated like a controlled export instead of software. Connor MacIvor breaks down what actually happened, why it got fixed, and what it means for a regular person or small business trying to trust any of this.">
+<meta name="author" content="Connor MacIvor">
+<link rel="canonical" href="https://connorwithhonorai.com/blog/the-week-claude-was-illegal-to-use/">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Week Claude Was Illegal to Use">
+<meta property="og:description" content="The US government banned a frontier AI model for 18 days, treated like a piece of restricted hardware. That is real. Here is what it means for the rest of us, in plain English.">
+<meta property="og:url" content="https://connorwithhonorai.com/blog/the-week-claude-was-illegal-to-use/">
+<meta property="og:image" content="https://connorwithhonorai.com/blog/the-week-claude-was-illegal-to-use/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-07-03">
+<meta property="article:author" content="Connor MacIvor">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Week Claude Was Illegal to Use">
+<meta name="twitter:description" content="A guy coding since 1983 explains the 18-day AI export ban, the $42.6 billion equity fight, and what the whiplash means for regular people, in plain English.">
+<meta name="twitter:image" content="https://connorwithhonorai.com/blog/the-week-claude-was-illegal-to-use/og.png">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 110'%3E%3Cpath d='M50 4 L92 18 V52 C92 78 72 96 50 106 C28 96 8 78 8 52 V18 Z' fill='%23c9a23a'/%3E%3Cg fill='%2314110b'%3E%3Crect x='46' y='28' width='8' height='54'/%3E%3Crect x='26' y='51' width='48' height='8'/%3E%3C/g%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BlogPosting",
+  "headline":"The Week Claude Was Illegal to Use",
+  "description":"For 18 days this summer, the US Commerce Department banned Claude Fable 5 and Mythos 5, the most capable version of a leading AI model, treating it as a controlled export instead of software. Connor MacIvor breaks down that ban, the $42.6 billion equity fight between OpenAI and Washington, Anthropic's counter-proposal of a digital dividend paid straight to people, and six other AI moves from the week of July 3, 2026, all translated for people who did not grow up on this technology.",
+  "image":"https://connorwithhonorai.com/blog/the-week-claude-was-illegal-to-use/og.png",
+  "datePublished":"2026-07-03",
+  "dateModified":"2026-07-03",
+  "author":{"@type":"Person","name":"Connor MacIvor","url":"https://connorwithhonorai.com","sameAs":["https://connorwithhonor.com","https://www.youtube.com/@scvleads"]},
+  "publisher":{"@type":"Person","name":"Connor MacIvor","logo":{"@type":"ImageObject","url":"https://connorwithhonorai.com/img/connor-hero.webp"}},
+  "mainEntityOfPage":{"@type":"WebPage","@id":"https://connorwithhonorai.com/blog/the-week-claude-was-illegal-to-use/"},
+  "keywords":"Claude export ban, Anthropic digital dividend, OpenAI equity stake, Commerce Department AI export controls, Claude Sonnet 5, Grok Voice Agent Builder, Meta Compute, AI for small business, AI for the rest of us, Connor MacIvor, Daily Download"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"VideoObject",
+  "name":"The Daily Download for July 3, 2026: The Week Claude Was Illegal",
+  "description":"Connor MacIvor's Daily Download for July 3, 2026: the 18-day US export ban on Claude Fable 5 and Mythos 5, OpenAI's $42.6 billion equity pitch to Washington versus Anthropic's digital dividend counter, Zuckerberg admitting agent progress has not accelerated, OpenAI shutting down Sora and walking from a $1 billion Disney deal, Claude Sonnet 5 going free worldwide, Meta Compute undercutting the compute-shortage narrative, Grok's no-code voice agent builder, Palantir's Alex Karp on cheap Chinese models, the Google talent exodus to Anthropic, and Claude Mythos finding 23,019 real vulnerabilities in open source code.",
+  "thumbnailUrl":"https://connorwithhonorai.com/blog/the-week-claude-was-illegal-to-use/og.png",
+  "uploadDate":"2026-07-03",
+  "contentUrl":"https://youtu.be/dksBsZjwHfs",
+  "embedUrl":"https://www.youtube.com/embed/dksBsZjwHfs"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://connorwithhonorai.com/"},
+    {"@type":"ListItem","position":2,"name":"Field Notes","item":"https://connorwithhonorai.com/blog/"},
+    {"@type":"ListItem","position":3,"name":"The Week Claude Was Illegal to Use","item":"https://connorwithhonorai.com/blog/the-week-claude-was-illegal-to-use/"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Was Claude actually illegal to use in the United States?","acceptedAnswer":{"@type":"Answer","text":"Yes, for a specific version. The US Commerce Department blocked Claude Fable 5 and Mythos 5, the most capable models Anthropic had released, treating them as a controlled export for 18 days before lifting the restriction this week. Older, less capable Claude models kept working the whole time. It was a narrow, top-tier ban, not a shutdown of Claude itself, but for those 18 days the frontier version was off-limits inside the country that built it."},
+    "position":1},
+    {"@type":"Question","name":"What is the digital dividend Anthropic proposed?","acceptedAnswer":{"@type":"Answer","text":"After OpenAI pitched the US government a 5 percent equity stake worth roughly $42.6 billion in exchange for a public wealth fund, Anthropic said no and offered a different idea: a tax-and-payout mechanism that sends money to people directly instead of parking a stake inside a government fund. One model hands Washington an ownership slice. The other tries to hand regular households a check. Neither is law yet, but the difference in approach tells you a lot about each company's pitch."},
+    "position":2},
+    {"@type":"Question","name":"If AI agent progress has not accelerated, why does it feel like everything is speeding up?","acceptedAnswer":{"@type":"Answer","text":"Mark Zuckerberg told Meta staff at an internal town hall that agent progress has not accelerated the way the company expected. That is a management and scaling problem inside one very large organization, not proof the underlying tools are stalling. A solo operator with no committee to convince can deploy one working agent faster than a 70,000-person company can move its org chart. Big-company frustration and small-operator speed are two different stories happening at the same time."},
+    "position":3},
+    {"@type":"Question","name":"Is it safe for a small business to use a cheap Chinese AI model to save money?","acceptedAnswer":{"@type":"Answer","text":"Treat it as a real compliance risk, not a shortcut. Palantir CEO Alex Karp flagged that US businesses are increasingly adopting cheaper Chinese models despite government restrictions, chasing price over usefulness. A small business that plugs in a restricted or poorly governed model to save a few dollars a month can walk into data-handling and compliance exposure it never priced in. Cheaper is not free if it costs you a client's trust or a regulator's attention later."},
+    "position":4},
+    {"@type":"Question","name":"How much does a capable AI model cost right now for a small business?","acceptedAnswer":{"@type":"Answer","text":"Claude Sonnet 5 became the free default worldwide this week, and the paid tier is priced at $2 per million tokens in and $10 per million tokens out through August 31, 2026. In plain terms, the cost floor for a business owner to run a genuinely capable model has dropped to near nothing. Add xAI's Grok Voice Agent Builder at 5 cents a minute with no code required, and the tooling cost that used to gatekeep this technology is close to gone."},
+    "position":5},
+    {"@type":"Question","name":"What is the single biggest AI risk regular people should actually watch right now?","acceptedAnswer":{"@type":"Answer","text":"Watch where the talent goes, not just which company posts the flashiest number. Google is reportedly losing key researchers including Noam Shazeer and John Jumper to Anthropic while its next model, Gemini 3, is said to be slipping on coding benchmarks. Benchmarks get marketed. Talent migration is a quieter, more honest signal of which lab is actually winning the next round, and it should factor into which AI vendor you trust with your business long term."},
+    "position":6},
+    {"@type":"Question","name":"What does it mean that an AI model found over 23,000 real security holes in open source code?","acceptedAnswer":{"@type":"Answer","text":"Claude Mythos scanned open source repositories and confirmed 23,019 real vulnerabilities across 1,000 repos, with a 90.6 percent independent confirmation rate. That is a large chunk of the free, open software running behind ordinary websites and apps that had holes nobody had found until an AI went looking. It cuts both ways: AI can expose weaknesses fast, which is genuinely useful for defenders, but it means the same capability exists for anyone using it to find those holes first."},
+    "position":7}
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --bg:#0a0a0c;--bg-2:#101015;--panel:#141419;
+    --ink:#f3efe6;--ink-soft:#a7a097;--ink-faint:#6b665d;
+    --gold:#c9a23a;--gold-bright:#e7c25a;--gold-deep:#8c6f24;--cyan:#3fb6c4;
+    --line:rgba(201,162,58,.18);--line-soft:rgba(243,239,230,.08);
+    --serif:'Fraunces',Georgia,serif;--sans:'Inter',system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  .macivor{font-family:var(--serif);font-weight:600;}
+  ::selection{background:var(--gold);color:#0a0a0c;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:760px;margin:0 auto;padding:0 clamp(20px,5vw,40px);}
+  .mono-label{font-family:var(--mono);font-size:.74rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);}
+  .shield{display:inline-block;vertical-align:middle;}
+
+  header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .4s,padding .4s,border-color .4s;border-bottom:1px solid transparent;padding:18px 0;}
+  header.scrolled{background:rgba(10,10,12,.86);backdrop-filter:blur(14px);padding:11px 0;border-bottom:1px solid var(--line);}
+  .nav{max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,56px);display:flex;align-items:center;justify-content:space-between;}
+  .brand{display:flex;align-items:center;gap:13px;font-family:var(--serif);font-size:1.12rem;font-weight:600;}
+  .brand .shield{width:24px;}
+  .brand small{font-family:var(--mono);font-size:.58rem;letter-spacing:.3em;color:var(--gold);display:block;text-transform:uppercase;font-weight:500;margin-top:2px;}
+  .nav .btn{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;padding:11px 20px;border:1px solid var(--gold);color:var(--gold);transition:all .3s;}
+  .nav .btn:hover{background:var(--gold);color:#0a0a0c;}
+
+  .post-hero{padding:140px 0 30px;}
+  .crumb{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:26px;}
+  .crumb a{color:var(--gold);}
+  .post-hero h1{font-family:var(--serif);font-weight:900;line-height:1.06;letter-spacing:-.015em;font-size:clamp(2rem,5.4vw,3.4rem);margin-bottom:22px;}
+  .post-hero h1 em{font-style:italic;color:var(--gold-bright);font-weight:500;}
+  .post-meta{display:flex;gap:18px;flex-wrap:wrap;align-items:center;font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;color:var(--ink-faint);text-transform:uppercase;border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);padding:16px 0;}
+  .post-meta .dot{color:var(--gold);}
+
+  .video-frame{position:relative;width:100%;aspect-ratio:16/9;margin:36px 0;border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.5);}
+  .video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+
+  .tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:8px;padding:26px 30px;margin:36px 0;}
+  .tldr h2{font-family:var(--mono);font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+  .tldr p{color:var(--ink-soft);font-size:1.02rem;}
+
+  article{font-size:1.1rem;}
+  article p{margin:0 0 24px;color:#e8e3d8;}
+  article h2{font-family:var(--serif);font-weight:900;font-size:clamp(1.6rem,3.4vw,2.2rem);line-height:1.12;letter-spacing:-.01em;margin:52px 0 20px;}
+  article strong{color:var(--gold-bright);font-weight:600;}
+  article a{color:var(--gold);border-bottom:1px solid var(--line);transition:border-color .3s;}
+  article a:hover{border-color:var(--gold);}
+  blockquote{border-left:2px solid var(--gold);padding:6px 0 6px 26px;margin:34px 0;}
+  blockquote p{font-family:var(--serif);font-style:italic;font-size:1.4rem;line-height:1.4;color:var(--ink);margin:0;}
+
+  .stat-block{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:28px 30px;margin:40px 0;}
+  .stat-block h3{font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+  .stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  .stat-grid div{border-left:2px solid var(--line);padding-left:16px;}
+  .stat-num{font-family:var(--serif);font-weight:900;font-size:1.7rem;color:var(--gold-bright);display:block;line-height:1.1;}
+  .stat-label{font-size:.86rem;color:var(--ink-soft);}
+  .stat-block .src{margin-top:18px;font-size:.82rem;color:var(--ink-faint);font-family:var(--mono);}
+  @media(max-width:560px){.stat-grid{grid-template-columns:1fr;}}
+
+  .chapters{background:var(--bg-2);border:1px solid var(--line-soft);border-radius:8px;padding:24px 28px;margin:36px 0;}
+  .chapters h2{font-family:var(--mono);font-size:.76rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+  .chapters a{display:flex;gap:16px;padding:7px 0;color:var(--ink-soft);font-size:.96rem;border:none;}
+  .chapters a:hover{color:var(--ink);}
+  .chapters .t{font-family:var(--mono);color:var(--gold);min-width:54px;font-size:.86rem;}
+
+  .faq{border-top:1px solid var(--line);margin-top:56px;padding-top:40px;}
+  .faq h2{font-family:var(--serif);font-weight:900;font-size:1.9rem;margin-bottom:24px;}
+  details{border-bottom:1px solid var(--line-soft);padding:18px 0;}
+  summary{font-family:var(--serif);font-size:1.12rem;font-weight:600;cursor:pointer;list-style:none;color:var(--ink);display:flex;justify-content:space-between;gap:16px;}
+  summary::-webkit-details-marker{display:none;}
+  summary::after{content:"+";color:var(--gold);font-family:var(--mono);}
+  details[open] summary::after{content:"\2212";}
+  details p{margin:14px 0 4px;color:var(--ink-soft);font-size:1rem;}
+
+  .spokes{background:var(--panel);border:1px solid var(--line-soft);border-radius:8px;padding:26px 28px;margin:40px 0;}
+  .spokes h3{font-family:var(--mono);font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+  .spokes ul{list-style:none;}
+  .spokes li{padding:7px 0;border-bottom:1px solid var(--line-soft);}
+  .spokes li:last-child{border-bottom:none;}
+  .spokes a{color:var(--ink-soft);}
+  .spokes a:hover{color:var(--gold);}
+
+  .cta-band{background:linear-gradient(180deg,var(--bg-2),var(--bg));border:1px solid var(--line);border-radius:10px;padding:40px;margin:56px 0;text-align:center;}
+  .cta-band h2{font-family:var(--serif);font-weight:900;font-size:1.8rem;margin-bottom:14px;}
+  .cta-band h2 em{font-style:italic;color:var(--gold-bright);font-weight:500;}
+  .cta-band p{color:var(--ink-soft);max-width:46ch;margin:0 auto 24px;}
+  .cta-band .btn{font-family:var(--mono);font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;padding:14px 26px;background:var(--gold);color:#0a0a0c;display:inline-block;transition:background .3s;}
+  .cta-band .btn:hover{background:var(--gold-bright);}
+  .cta-band .phone{display:block;margin-top:14px;font-family:var(--mono);font-size:.86rem;color:var(--ink-faint);}
+  .cta-band .phone a{color:var(--gold);border:none;}
+
+  .related{margin:48px 0;}
+  .related h3{font-family:var(--mono);font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+  .related a{display:block;color:var(--ink-soft);padding:8px 0;border-bottom:1px solid var(--line-soft);border-radius:0;}
+  .related a:hover{color:var(--ink);}
+
+  footer{border-top:1px solid var(--line);background:var(--bg);padding:50px 0 38px;margin-top:60px;}
+  .foot-in{max-width:760px;margin:0 auto;padding:0 clamp(20px,5vw,40px);}
+  .foot-brand{display:flex;align-items:center;gap:13px;font-family:var(--serif);font-size:1.2rem;font-weight:600;margin-bottom:14px;}
+  .foot-brand .shield{width:26px;}
+  .foot-links{display:flex;gap:22px;flex-wrap:wrap;margin:18px 0;font-size:.88rem;}
+  .foot-links a{color:var(--ink-soft);}
+  .foot-links a:hover{color:var(--gold);}
+  .foot-bottom{border-top:1px solid var(--line-soft);padding-top:22px;font-size:.8rem;color:var(--ink-faint);}
+
+  @media(max-width:620px){.post-hero{padding:120px 0 20px;}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <linearGradient id="goldgrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e7c25a"/><stop offset="55%" stop-color="#c9a23a"/><stop offset="100%" stop-color="#8c6f24"/></linearGradient>
+  <symbol id="shield" viewBox="0 0 100 110">
+    <path d="M50 3 L93 17 V53 C93 79 72 98 50 107 C28 98 7 79 7 53 V17 Z" fill="url(#goldgrad)" stroke="#f0d77a" stroke-width="1.2"/>
+    <g fill="#14110b">
+      <rect x="46" y="27" width="8" height="56"/><rect x="24" y="51" width="52" height="8"/>
+      <rect x="42" y="25" width="16" height="3"/><rect x="42" y="82" width="16" height="3"/>
+      <rect x="22" y="49" width="3" height="12"/><rect x="75" y="49" width="3" height="12"/>
+      <g><rect x="32" y="37" width="3" height="9"/><rect x="29.5" y="39.5" width="8" height="3"/><rect x="65" y="37" width="3" height="9"/><rect x="62.5" y="39.5" width="8" height="3"/><rect x="32" y="65" width="3" height="9"/><rect x="29.5" y="67.5" width="8" height="3"/><rect x="65" y="65" width="3" height="9"/><rect x="62.5" y="67.5" width="8" height="3"/></g>
+    </g>
+  </symbol>
+</defs></svg>
+
+<header id="hdr">
+  <div class="nav">
+    <a href="/" class="brand"><svg class="shield"><use href="#shield"/></svg><span>Connor <span class="macivor">MacIvor</span><small>AI With Honor</small></span></a>
+    <a href="/#book" class="btn">Book Connor</a>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+  <div class="post-hero">
+    <div class="crumb"><a href="/">Home</a> / <a href="/blog/">Field Notes</a> / The Week Claude Was Illegal to Use</div>
+    <h1>The Week Claude Was <em>Illegal to Use.</em></h1>
+    <div class="post-meta">
+      <span>By Connor <span class="macivor">MacIvor</span></span>
+      <span class="dot">&bull;</span>
+      <span>July 3, 2026</span>
+      <span class="dot">&bull;</span>
+      <span>Daily Download</span>
+      <span class="dot">&bull;</span>
+      <span>11 min read</span>
+    </div>
+  </div>
+
+  <div class="video-frame">
+    <iframe src="https://www.youtube.com/embed/dksBsZjwHfs" title="The Daily Download for July 3, 2026: The Week Claude Was Illegal" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+  <div class="tldr">
+    <h2>TL;DR</h2>
+    <p>For 18 days this summer, the US Commerce Department banned Claude Fable 5 and Mythos 5 inside the United States, treating the most capable version of a leading AI model like a piece of restricted hardware. That got fixed this week. In the same seven days, OpenAI offered Washington a 5 percent equity stake worth about $42.6 billion for a public wealth fund, and Anthropic said no, countering with a "digital dividend" that pays people directly instead. Claude Sonnet 5 became the free default worldwide at $2 in, $10 out per million tokens through August 31. Mark Zuckerberg admitted to Meta staff that AI agent progress "hasn't accelerated" as expected, which is a big-company problem, not proof the tools are stalling; a solo operator can still ship one working agent faster than Meta's org chart can turn. OpenAI is shutting down Sora and reportedly walking from a $1 billion Disney deal. Meta's new cloud-reselling arm, Meta Compute, sent its own stock up about 9 percent the same day two infrastructure darlings, CoreWeave and Nebius, fell 14 and 17 percent, which undercuts the "AI compute shortage" story. None of this requires a computer science degree to use. It requires knowing what happened and what it means for you, which is the whole point of this post.</p>
+  </div>
+
+  <article>
+    <p>Here is a sentence that should not be possible to write about software, and I am writing it anyway. For 18 days, the most advanced version of a major AI model was against the law to use inside the country that built it. Not because it did anything wrong. Because the US Commerce Department decided it was too powerful to let out the door without a permission slip, the same category of control usually reserved for jet engine parts and encryption chips headed overseas. This week, that ban got lifted. I want to walk you through what actually happened, because if you are the kind of person who still feels a step behind on all of this, this is the story that tells you the ground is moving faster than the headlines make it sound, and also that you are not the one who is behind. The people running this stuff do not fully agree on the rules either.</p>
+
+    <h2>What actually happened with the Claude export ban?</h2>
+    <p>Anthropic's Claude Fable 5 and Claude Mythos 5, its two most capable models, got hit with US export controls by the Commerce Department. For 18 days, using the top-tier version of Claude inside the United States was treated the same way as shipping a controlled piece of hardware overseas without a license. This week, those controls were lifted and the models became legal to use again, no restrictions.</p>
+    <p>I want you to sit with how strange that actually is, because the headline moves fast and the strangeness gets lost. We are used to the government regulating what leaves the country, not what a person inside the country is allowed to run on their own laptop. For those 18 days, the most capable AI model from one of the leading American labs got treated less like software and more like a jet engine part. That tells you the people writing the rules are genuinely unsure where AI capability belongs in the law, and they are figuring it out in public, in real time, with real consequences for anyone who had already built a workflow on top of it.</p>
+    <p>If you run a business and you were leaning on Claude for anything serious during that window, older, less powerful versions kept working the whole time. It was a narrow ban on the frontier tier, not a blackout of the whole product. But narrow does not mean small. It means the newest, best version, the one companies were racing to adopt, was the one pulled off the table.</p>
+
+    <h2>Why did OpenAI offer the government a $42.6 billion stake, and why did Anthropic say no?</h2>
+    <p>OpenAI pitched the US government a 5 percent equity stake in the company, worth roughly $42.6 billion, structured through a public wealth fund. Anthropic turned that idea down and proposed something different: a "digital dividend," a tax-and-payout mechanism that sends money to people directly instead of parking an ownership stake inside a government fund.</p>
+    <p>Strip the jargon out and you have two very different bets on how this era gets paid for. OpenAI's version hands Washington a seat at the table, an institutional stake in the upside. Anthropic's version tries to route the upside straight to households. Neither one is law. Both are opening offers in a negotiation that is going to shape who benefits when AI actually starts generating the kind of wealth these companies keep promising. I am not going to pretend I know which one wins. I am going to tell you to watch this fight closely, because whichever structure sticks becomes the template for the next decade of how AI money moves, and that affects you whether or not you ever type a prompt into anything.</p>
+    <p>This ties directly to the phrase I keep coming back to on this whole site: <strong>AI for everyone, not just the wealthy.</strong> A $42.6 billion equity stake sitting inside a government fund is still, structurally, wealth concentrating at the top, just a different top. A digital dividend paid to people is at least aimed in the other direction. Watch what actually gets built, not what gets pitched.</p>
+
+    <blockquote><p>For 18 days, the newest version of a leading AI model was illegal to use in the country that built it. That should tell you something about how unsettled the rules still are, at every level, including the top.</p></blockquote>
+
+    <h2>Is AI agent progress actually slowing down?</h2>
+    <p>Not in the way it sounds. Mark Zuckerberg told Meta staff at an internal town hall that AI agent progress "hasn't accelerated" the way the company expected. That is a real admission from a company spending enormous money on this bet, but it is a scaling and management problem inside one very large organization, not evidence that the underlying technology has stalled.</p>
+    <p>Here is the part that matters if you run a small business or work solo: a company with 70,000 employees has to move an agent idea through committees, legal review, brand approval, and a dozen VPs before it ships anything. A solo operator, or a five-person shop, has none of that. You can deploy one working agent, an AI that answers your phone, follows up your leads, or drafts your invoices, in an afternoon, while a company the size of Meta is still scheduling the meeting about whether to schedule the meeting. Their slowdown is a bureaucracy problem. Your speed is the actual advantage, and it is the whole reason I built my business the way I did.</p>
+
+    <h2>Why is OpenAI shutting down Sora, and what does that tell you about the AI race?</h2>
+    <p>OpenAI is shutting down Sora, its video-generation product, and reportedly walking away from a $1 billion licensing deal with Disney. Reporting frames the pivot as OpenAI redirecting toward enterprise products and a new custom chip, with Claude Code reportedly eating into OpenAI's standing among developers.</p>
+    <p>If a company can spend real money building a headline product, sign the kind of company as recognizable as Disney, and then walk away from both inside the same year, that tells you something honest: even the labs at the very top of this race do not know for certain which bets will land. Nobody has this fully figured out, not the billion-dollar companies, not the government, not you. That should take some of the pressure off. You are not supposed to have a perfect AI strategy in July 2026. Neither does OpenAI.</p>
+
+    <h2>What just got a lot cheaper, and what does that mean for a small business?</h2>
+    <p>Claude Sonnet 5 became the free default worldwide this week, with paid usage priced at $2 per million tokens in and $10 per million tokens out through August 31, 2026. Separately, xAI opened its Grok Voice Agent Builder to everyone, no code required, at 5 cents a minute with sub-second response latency.</p>
+    <p>Translate that out of tech-speak. A capable AI model, one that can write, summarize, and reason through a real business problem, now has a cost floor close to zero for casual use and a genuinely small bill for heavy use. A voice agent that can answer your phone and hold a real conversation costs about a nickel a minute to run, and you do not need to write a line of code to build it. The tooling barrier that used to separate "big company with an engineering team" from "regular business owner" is close to gone. What separates them now is not access to the tools. It is knowing which vertical, which script, and which follow-up sequence actually converts a lead into a customer. That is not a coding problem. That is a business problem, and it is exactly the gap I spend my time closing for people.</p>
+
+    <div class="stat-block">
+      <h3>Numbers Connor Is Watching</h3>
+      <div class="stat-grid">
+        <div><span class="stat-num">18 days</span><span class="stat-label">Claude Fable 5 and Mythos 5 were under a US export ban before Commerce lifted it this week</span></div>
+        <div><span class="stat-num">$42.6B</span><span class="stat-label">Value of the 5% equity stake OpenAI offered the US government via a public wealth fund</span></div>
+        <div><span class="stat-num">9% vs -14%/-17%</span><span class="stat-label">Meta stock rose on Meta Compute the same day CoreWeave fell 14% and Nebius fell 17%</span></div>
+        <div><span class="stat-num">23,019</span><span class="stat-label">Real vulnerabilities Claude Mythos confirmed across 1,000 open source repos, 90.6% independent confirmation rate</span></div>
+      </div>
+      <p class="src">Compiled by Connor MacIvor, ConnorWithHonorAI.com, from the week of July 3, 2026. Cite with attribution.</p>
+    </div>
+
+    <h2>Does the "AI compute shortage" story still hold up?</h2>
+    <p>Not as cleanly as it did a few months ago. Meta unveiled a new AI cloud-reselling business called Meta Compute this week. Meta's stock rose roughly 9 percent the same day two infrastructure-focused companies, CoreWeave and Nebius, fell 14 percent and 17 percent respectively.</p>
+    <p>For over a year, part of the pitch from AI infrastructure startups has been scarcity: not enough chips, not enough data centers, get in line and pay up. When one of the biggest tech companies on earth can casually stand up its own compute-reselling arm and the market rewards it while punishing the specialist infrastructure players, that scarcity story gets a lot harder to sell with a straight face. I am not telling you compute is suddenly unlimited. I am telling you to be skeptical the next time someone uses "shortage" as the reason their AI product costs what it costs.</p>
+
+    <h2>Is it risky to use a cheap AI model just because it is cheap?</h2>
+    <p>Yes, and this is the part I actually want small business owners to sit up for. Palantir CEO Alex Karp said this week that AI labs are chasing raw power over enterprise usefulness, while US businesses increasingly adopt cheaper Chinese AI models despite government restrictions against doing exactly that.</p>
+    <p>If you are a small business owner tempted by an AI tool that seems too cheap to be true, that is worth a second look before you plug your customer data into it. This is not me fearmongering about foreign technology. It is a straightforward point: restricted models carry restrictions for a reason, and a small business does not have the legal team to absorb a compliance mess if it goes sideways. Cheap is not the same as smart. I would rather point a client toward a model with a clean compliance story at $2 per million tokens than toward something unrestricted-sounding that quietly puts their business at risk.</p>
+
+    <h2>Why does it matter that Google is losing talent to Anthropic?</h2>
+    <p>Google is reportedly experiencing a talent exodus, with researchers including Noam Shazeer and John Jumper said to be headed to Anthropic, while Google's next model, Gemini 3, is reportedly slipping in coding benchmarks.</p>
+    <p>Here is a filter I would give anyone picking a long-term AI vendor for their business: watch where the talent moves, not just where the benchmark chart points this month. Benchmarks get gamed, marketed, and cherry-picked. People vote with their careers. When top researchers leave one lab for another, that is a slower, quieter, and honestly more reliable signal about who is actually winning the next round than any single leaderboard screenshot.</p>
+
+    <h2>What did Claude Mythos find when it went looking for security holes?</h2>
+    <p>Claude Mythos scanned open source code and confirmed 23,019 real vulnerabilities across 1,000 repositories, with a 90.6 percent independent confirmation rate. That is a large chunk of the free, open software quietly running behind ordinary websites, apps, and business tools, holding holes nobody had found until an AI went looking.</p>
+    <p>I want to be straight with you about what that number means both ways. It is genuinely useful: defenders now have a tool that can comb through code at a scale no human team could match, and 90.6 percent confirmed means it is not just flagging noise. It is also a reminder that the same capability cuts both directions. A tool that can find 23,019 real holes for the people trying to fix them can, in someone else's hands, find them for people trying to exploit them. That is not a reason to panic. It is a reason to take security seriously if any part of your business touches open source software, which, if you are honest about it, it almost certainly does.</p>
+
+    <h2>So what do you actually do with all of this?</h2>
+    <p>You do not need to track export control law, equity fights in Washington, or Google's org chart to run a good business. What you need is the plain-English translation, which is what this post is. Here is the short version. The rules are being written in real time, even by the people who built this technology, so do not feel behind for not having it figured out, because nobody does. Costs are dropping fast, Claude Sonnet 5 free worldwide, voice agents at 5 cents a minute, which means the tools are no longer the barrier. The barrier now is knowing what to build and where it converts. And the risk is not "AI is scary." The risk is plugging in the wrong tool, cheap and unrestricted, without understanding what you are exposing.</p>
+    <p>I have been coding since 1983, a kid on a Timex Sinclair 1000 with 2 kilobytes of memory, and I have watched enough technology cycles to know the pattern. The first wave scares people. The second wave prices out the people who waited too long to learn it. I built this whole site, and my Choose Your Hard framework, so that Gen X, Boomers, and anyone who feels like the twenty-somethings got a head start does not have to figure this out alone or from a headline written for engineers.</p>
+    <p>If you want the fuller three-lane recap of everything from today's show, including the real estate market read and the health and fasting lane, I put the full picture on the hub post over at <a href="https://connorwithhonor.com/blog/" target="_blank" rel="noopener">connorwithhonor.com/blog</a>. This post is the AI lane only, on purpose, because that is what this site is for.</p>
+  </article>
+
+  <div class="faq">
+    <h2>Questions People Ask</h2>
+    <details><summary>Was Claude actually illegal to use in the United States?</summary><p>Yes, for a specific version. The US Commerce Department blocked Claude Fable 5 and Mythos 5, the most capable models Anthropic had released, treating them as a controlled export for 18 days before lifting the restriction this week. Older, less capable Claude models kept working the whole time. It was a narrow, top-tier ban, not a shutdown of Claude itself, but for those 18 days the frontier version was off-limits inside the country that built it.</p></details>
+    <details><summary>What is the digital dividend Anthropic proposed?</summary><p>After OpenAI pitched the US government a 5 percent equity stake worth roughly $42.6 billion in exchange for a public wealth fund, Anthropic said no and offered a different idea: a tax-and-payout mechanism that sends money to people directly instead of parking a stake inside a government fund. One model hands Washington an ownership slice. The other tries to hand regular households a check. Neither is law yet, but the difference in approach tells you a lot about each company's pitch.</p></details>
+    <details><summary>If AI agent progress has not accelerated, why does it feel like everything is speeding up?</summary><p>Mark Zuckerberg told Meta staff at an internal town hall that agent progress has not accelerated the way the company expected. That is a management and scaling problem inside one very large organization, not proof the underlying tools are stalling. A solo operator with no committee to convince can deploy one working agent faster than a 70,000-person company can move its org chart. Big-company frustration and small-operator speed are two different stories happening at the same time.</p></details>
+    <details><summary>Is it safe for a small business to use a cheap Chinese AI model to save money?</summary><p>Treat it as a real compliance risk, not a shortcut. Palantir CEO Alex Karp flagged that US businesses are increasingly adopting cheaper Chinese models despite government restrictions, chasing price over usefulness. A small business that plugs in a restricted or poorly governed model to save a few dollars a month can walk into data-handling and compliance exposure it never priced in. Cheaper is not free if it costs you a client's trust or a regulator's attention later.</p></details>
+    <details><summary>How much does a capable AI model cost right now for a small business?</summary><p>Claude Sonnet 5 became the free default worldwide this week, and the paid tier is priced at $2 per million tokens in and $10 per million tokens out through August 31, 2026. In plain terms, the cost floor for a business owner to run a genuinely capable model has dropped to near nothing. Add xAI's Grok Voice Agent Builder at 5 cents a minute with no code required, and the tooling cost that used to gatekeep this technology is close to gone.</p></details>
+    <details><summary>What is the single biggest AI risk regular people should actually watch right now?</summary><p>Watch where the talent goes, not just which company posts the flashiest number. Google is reportedly losing key researchers including Noam Shazeer and John Jumper to Anthropic while its next model, Gemini 3, is said to be slipping on coding benchmarks. Benchmarks get marketed. Talent migration is a quieter, more honest signal of which lab is actually winning the next round, and it should factor into which AI vendor you trust with your business long term.</p></details>
+    <details><summary>What does it mean that an AI model found over 23,000 real security holes in open source code?</summary><p>Claude Mythos scanned open source repositories and confirmed 23,019 real vulnerabilities across 1,000 repos, with a 90.6 percent independent confirmation rate. That is a large chunk of the free, open software running behind ordinary websites and apps that had holes nobody had found until an AI went looking. It cuts both ways: AI can expose weaknesses fast, which is genuinely useful for defenders, but it means the same capability exists for anyone using it to find those holes first.</p></details>
+  </div>
+
+  <div class="spokes">
+    <h3>The Rest of Today's Episode</h3>
+    <ul>
+      <li><a href="https://connorwithhonor.com/blog/" target="_blank" rel="noopener">connorwithhonor.com/blog</a> &mdash; the full three-lane hub recap for July 3, 2026</li>
+      <li><a href="https://santaclaritaopenhouses.com/blog" target="_blank" rel="noopener">santaclaritaopenhouses.com/blog</a> &mdash; this week's Santa Clarita Valley market watch</li>
+      <li><a href="https://sellersonlyagent.com/blog" target="_blank" rel="noopener">sellersonlyagent.com/blog</a> &mdash; the seller-strategy read on the same market data</li>
+      <li><a href="https://thelastaddiction.com/blog" target="_blank" rel="noopener">thelastaddiction.com/blog</a> &mdash; today's fasting and recovery lane</li>
+    </ul>
+  </div>
+
+  <div class="cta-band">
+    <h2>Want AI translated for <em>your</em> business?</h2>
+    <p>Text AI to (661) 400-1720 and it lands on my real cell, not a bot farm. I will tell you plainly what is worth your time this week and what is noise. AI for everyone, not just the wealthy.</p>
+    <a href="/#book" class="btn">Book Connor</a>
+    <span class="phone">Or call/text directly: <a href="tel:+16614001720">(661) 400-1720</a></span>
+  </div>
+
+  <div class="related">
+    <h3>More Field Notes</h3>
+    <a href="/blog/the-2am-lead-nobody-answered/">The 2 AM Lead Nobody Answered &rarr;</a>
+    <a href="/blog/one-billion-ai-agents-and-the-doubling-penny/">One Billion AI Agents and the Doubling Penny &rarr;</a>
+    <a href="/blog/what-is-ai-explained-in-plain-english/">What Is AI, Really? A Plain-English Guide &rarr;</a>
+  </div>
+</div>
+</main>
+
+<footer>
+  <div class="foot-in">
+    <div class="foot-brand"><svg class="shield"><use href="#shield"/></svg><span>Connor <span class="macivor">MacIvor</span></span></div>
+    <p style="color:var(--ink-soft);font-size:.92rem;">AI for everyone. Not just the wealthy.</p>
+    <div class="foot-links">
+      <a href="/">Home</a><a href="/blog/">Field Notes</a><a href="/#method">How I Think</a><a href="/#book">Book Connor</a>
+      <a href="https://www.youtube.com/@scvleads" target="_blank" rel="noopener">YouTube</a><a href="https://connorwithhonor.com" target="_blank" rel="noopener">connorwithhonor.com</a>
+    </div>
+    <div class="foot-bottom">&copy; 2026 Connor <span class="macivor">MacIvor</span>. Connor T. MacIvor &middot; CalDRE #01238257 &middot; Sync Brokerage, Inc. &middot; DRE #02031490. AI systems built for one business at a time. Your customer list stays yours.</div>
+  </div>
+</footer>
+
+<script>
+  const hdr=document.getElementById('hdr');
+  addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>40));
+</script>
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Is Not a Neutral Judge: The One Rule That Runs My Whole Practice | Connor MacIvor</title>
+<meta name="description" content="I deploy AI in real businesses every day, and I never let it make a values call. Here is the plain-English rule that keeps it useful instead of dangerous: let the machine own truth problems, keep values problems for yourself. When AI sounds most confident and neutral is exactly when you check it.">
+<meta name="author" content="Connor MacIvor">
+<link rel="canonical" href="https://connorwithhonorai.com/blog/ai-is-not-a-neutral-judge/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI Is Not a Neutral Judge: The One Rule That Runs My Whole Practice">
+<meta property="og:description" content="No skin in the game does not mean no side. Why a working operator lets AI own the facts and never the fairness, and the two-question test that exposes a machine pretending to be objective.">
+<meta property="og:url" content="https://connorwithhonorai.com/blog/ai-is-not-a-neutral-judge/">
+<meta property="og:image" content="https://connorwithhonorai.com/img/ai-not-neutral-judge-og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-07-05">
+<meta property="article:author" content="Connor MacIvor">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Is Not a Neutral Judge">
+<meta name="twitter:description" content="Let the machine own the facts. Keep the fairness for yourself. The rule that runs my whole practice.">
+<meta name="twitter:image" content="https://connorwithhonorai.com/img/ai-not-neutral-judge-og.png">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 110'%3E%3Cpath d='M50 4 L92 18 V52 C92 78 72 96 50 106 C28 96 8 78 8 52 V18 Z' fill='%23c9a23a'/%3E%3Cg fill='%2314110b'%3E%3Crect x='46' y='28' width='8' height='54'/%3E%3Crect x='26' y='51' width='48' height='8'/%3E%3C/g%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+<!-- BlogPosting schema -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BlogPosting",
+  "headline":"AI Is Not a Neutral Judge: The One Rule That Runs My Whole Practice",
+  "description":"A working operator who deploys AI in real businesses explains why he never lets it make a values call, and the plain-English rule that keeps AI useful instead of dangerous.",
+  "image":"https://connorwithhonorai.com/img/ai-not-neutral-judge-og.png",
+  "datePublished":"2026-07-05",
+  "dateModified":"2026-07-05",
+  "author":{"@type":"Person","name":"Connor MacIvor","url":"https://connorwithhonorai.com"},
+  "publisher":{"@type":"Person","name":"Connor MacIvor","logo":{"@type":"ImageObject","url":"https://connorwithhonorai.com/img/connor-tux.png"}},
+  "mainEntityOfPage":{"@type":"WebPage","@id":"https://connorwithhonorai.com/blog/ai-is-not-a-neutral-judge/"},
+  "keywords":"AI neutral judge, can I trust AI to be objective, should I let AI make decisions, AI bias business, truth problems values problems, AI ethics plain english, AI decision making, when to trust AI"
+}
+</script>
+
+<!-- VideoObject -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"VideoObject",
+  "name":"Why AI Can Never Settle Our Biggest Fights (Truth vs. Values)",
+  "description":"Connor MacIvor breaks down why AI can solve truth problems but never values problems, and why a machine that sounds neutral is more dangerous than a person who admits a side.",
+  "thumbnailUrl":"https://connorwithhonorai.com/img/ai-not-neutral-judge-og.png",
+  "uploadDate":"2026-07-05",
+  "contentUrl":"https://youtu.be/HSBc5a91amo",
+  "embedUrl":"https://www.youtube.com/embed/HSBc5a91amo"
+}
+</script>
+
+<!-- FAQ schema -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Should I let AI make decisions for my business?","acceptedAnswer":{"@type":"Answer","text":"Let it make the fact-based ones and keep the judgment calls for yourself. AI is excellent at the parts of a decision that have a real answer: what did the comparable homes actually sell for, what does the math say about a risk, what happened the last three times someone tried this. It is worthless and even dangerous on the parts that depend on what you value: what is a fair price to ask a family, who deserves the benefit of the doubt, what is the right thing to do. Feed it the facts, make the call yourself."}},
+    {"@type":"Question","name":"Can I trust AI to be objective?","acceptedAnswer":{"@type":"Answer","text":"No, and the word objective is where people get fooled. AI learned everything it knows from human writing, so it carries human bias, and the company that built it decides what it is allowed to say. When it answers a question about what is fair or right, you are getting an average of what it read plus what a policy team chose, delivered in a calm voice that sounds like a calculator. Objective sounding is not the same as objective."}},
+    {"@type":"Question","name":"What tasks should I hand to AI right now?","acceptedAnswer":{"@type":"Answer","text":"Hand it the truth problems: research, first drafts, summarizing long documents, pulling patterns out of data, running the numbers on a risk, catching things you missed. Keep the values problems: pricing that affects a real family, hiring and firing, anything about fairness, faith, or what you owe the people around you. The rule is simple. If the question has a real answer out in the world, let the machine chase it. If the answer depends on what you care about, you decide."}},
+    {"@type":"Question","name":"How do I know when AI is bluffing me?","acceptedAnswer":{"@type":"Answer","text":"Watch for confidence on a question that has no factual answer. When a machine gives you a smooth, certain response about what is fair, moral, or political, that smoothness is the tell, not the proof. Run the two-question test: what did it read to form this, and who decided what it is allowed to say. The moment you ask those, the fake neutrality falls apart and you can take the answer for what it is, one input, not a verdict."}},
+    {"@type":"Question","name":"Is it foolish to ask AI moral or personal questions?","acceptedAnswer":{"@type":"Answer","text":"It is fine to ask, as long as you never treat the answer as the final word. AI can lay out the considerations, show you angles you had not thought of, and organize your own thinking. What it cannot do is choose for you, because there is no correct answer sitting in the data. A value is chosen, not calculated. Use the machine to think, never to decide what you hold sacred."}},
+    {"@type":"Question","name":"What is the one rule for using AI safely?","acceptedAnswer":{"@type":"Answer","text":"Split every question before you ask it. Decide whether it is a truth problem, which has a real answer in reality, or a values problem, which depends on what you care about. Truth, let the machine drive and check its sources. Values, take the wheel and keep it. That single habit turns AI from a thing that can quietly steer you into a tool that makes you sharper. It is the whole rule."}}
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --bg:#0a0a0c;--bg-2:#101015;--panel:#141419;
+    --ink:#f3efe6;--ink-soft:#a7a097;--ink-faint:#6b665d;
+    --gold:#c9a23a;--gold-bright:#e7c25a;--gold-deep:#8c6f24;--cyan:#3fb6c4;
+    --line:rgba(201,162,58,.18);--line-soft:rgba(243,239,230,.08);
+    --serif:'Fraunces',Georgia,serif;--sans:'Inter',system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  .macivor{font-family:var(--serif);font-weight:600;}
+  ::selection{background:var(--gold);color:#0a0a0c;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:760px;margin:0 auto;padding:0 clamp(20px,5vw,40px);}
+  .mono-label{font-family:var(--mono);font-size:.74rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);}
+  .shield{display:inline-block;vertical-align:middle;}
+
+  header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .4s,padding .4s,border-color .4s;border-bottom:1px solid transparent;padding:18px 0;}
+  header.scrolled{background:rgba(10,10,12,.86);backdrop-filter:blur(14px);padding:11px 0;border-bottom:1px solid var(--line);}
+  .nav{max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,56px);display:flex;align-items:center;justify-content:space-between;}
+  .brand{display:flex;align-items:center;gap:13px;font-family:var(--serif);font-size:1.12rem;font-weight:600;}
+  .brand .shield{width:24px;}
+  .brand small{font-family:var(--mono);font-size:.58rem;letter-spacing:.3em;color:var(--gold);display:block;text-transform:uppercase;font-weight:500;margin-top:2px;}
+  .nav .btn{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;padding:11px 20px;border:1px solid var(--gold);color:var(--gold);transition:all .3s;}
+  .nav .btn:hover{background:var(--gold);color:#0a0a0c;}
+
+  .post-hero{padding:140px 0 30px;}
+  .crumb{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:26px;}
+  .crumb a{color:var(--gold);}
+  .post-hero h1{font-family:var(--serif);font-weight:900;line-height:1.06;letter-spacing:-.015em;font-size:clamp(2rem,5.4vw,3.4rem);margin-bottom:22px;}
+  .post-hero h1 em{font-style:italic;color:var(--gold-bright);font-weight:500;}
+  .post-meta{display:flex;gap:18px;flex-wrap:wrap;align-items:center;font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;color:var(--ink-faint);text-transform:uppercase;border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);padding:16px 0;}
+  .post-meta .dot{color:var(--gold);}
+
+  .video-frame{position:relative;width:100%;aspect-ratio:16/9;margin:36px 0;border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.5);}
+  .video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+
+  .tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:8px;padding:26px 30px;margin:36px 0;}
+  .tldr h2{font-family:var(--mono);font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+  .tldr p{color:var(--ink-soft);font-size:1.02rem;}
+
+  article{font-size:1.1rem;}
+  article p{margin:0 0 24px;color:#e8e3d8;}
+  article h2{font-family:var(--serif);font-weight:900;font-size:clamp(1.6rem,3.4vw,2.2rem);line-height:1.12;letter-spacing:-.01em;margin:52px 0 20px;}
+  article h3{font-family:var(--serif);font-weight:600;font-size:1.4rem;margin:38px 0 14px;color:var(--ink);}
+  article strong{color:var(--gold-bright);font-weight:600;}
+  article a{color:var(--gold);border-bottom:1px solid var(--line);transition:border-color .3s;}
+  article a:hover{border-color:var(--gold);}
+  article ul{margin:0 0 24px;padding-left:22px;color:#e8e3d8;}
+  article li{margin-bottom:10px;}
+  blockquote{border-left:2px solid var(--gold);padding:6px 0 6px 26px;margin:34px 0;}
+  blockquote p{font-family:var(--serif);font-style:italic;font-size:1.4rem;line-height:1.4;color:var(--ink);margin:0;}
+
+  .qa{margin:34px 0;}
+  .qa .q{font-family:var(--serif);font-weight:600;font-size:1.18rem;color:var(--gold-bright);margin:26px 0 8px;}
+  .qa .a{color:#e8e3d8;margin-bottom:6px;}
+
+  .faq{border-top:1px solid var(--line);margin-top:56px;padding-top:40px;}
+  .faq h2{font-family:var(--serif);font-weight:900;font-size:1.9rem;margin-bottom:24px;}
+  details{border-bottom:1px solid var(--line-soft);padding:18px 0;}
+  summary{font-family:var(--serif);font-size:1.12rem;font-weight:600;cursor:pointer;list-style:none;color:var(--ink);display:flex;justify-content:space-between;gap:16px;}
+  summary::-webkit-details-marker{display:none;}
+  summary::after{content:"+";color:var(--gold);font-family:var(--mono);}
+  details[open] summary::after{content:"\2212";}
+  details p{margin:14px 0 4px;color:var(--ink-soft);font-size:1rem;}
+
+  .cta-band{background:linear-gradient(180deg,var(--bg-2),var(--bg));border:1px solid var(--line);border-radius:10px;padding:40px;margin:56px 0;text-align:center;}
+  .cta-band h2{font-family:var(--serif);font-weight:900;font-size:1.8rem;margin-bottom:14px;}
+  .cta-band h2 em{font-style:italic;color:var(--gold-bright);font-weight:500;}
+  .cta-band p{color:var(--ink-soft);max-width:46ch;margin:0 auto 24px;}
+  .cta-band .btn{font-family:var(--mono);font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;padding:14px 26px;background:var(--gold);color:#0a0a0c;display:inline-block;transition:background .3s;}
+  .cta-band .btn:hover{background:var(--gold-bright);}
+
+  .related{margin:48px 0;}
+  .related h3{font-family:var(--mono);font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+  .related a{display:block;color:var(--ink-soft);padding:8px 0;border-bottom:1px solid var(--line-soft);border-radius:0;}
+  .related a:hover{color:var(--ink);}
+
+  footer{border-top:1px solid var(--line);background:var(--bg);padding:50px 0 38px;margin-top:60px;}
+  .foot-in{max-width:760px;margin:0 auto;padding:0 clamp(20px,5vw,40px);}
+  .foot-brand{display:flex;align-items:center;gap:13px;font-family:var(--serif);font-size:1.2rem;font-weight:600;margin-bottom:14px;}
+  .foot-brand .shield{width:26px;}
+  .foot-links{display:flex;gap:22px;flex-wrap:wrap;margin:18px 0;font-size:.88rem;}
+  .foot-links a{color:var(--ink-soft);}
+  .foot-links a:hover{color:var(--gold);}
+  .foot-bottom{border-top:1px solid var(--line-soft);padding-top:22px;font-size:.8rem;color:var(--ink-faint);}
+
+  @media(max-width:620px){.post-hero{padding:120px 0 20px;}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <linearGradient id="goldgrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e7c25a"/><stop offset="55%" stop-color="#c9a23a"/><stop offset="100%" stop-color="#8c6f24"/></linearGradient>
+  <symbol id="shield" viewBox="0 0 100 110">
+    <path d="M50 3 L93 17 V53 C93 79 72 98 50 107 C28 98 7 79 7 53 V17 Z" fill="url(#goldgrad)" stroke="#f0d77a" stroke-width="1.2"/>
+    <g fill="#14110b">
+      <rect x="46" y="27" width="8" height="56"/><rect x="24" y="51" width="52" height="8"/>
+      <rect x="42" y="25" width="16" height="3"/><rect x="42" y="82" width="16" height="3"/>
+      <rect x="22" y="49" width="3" height="12"/><rect x="75" y="49" width="3" height="12"/>
+      <g><rect x="32" y="37" width="3" height="9"/><rect x="29.5" y="39.5" width="8" height="3"/><rect x="65" y="37" width="3" height="9"/><rect x="62.5" y="39.5" width="8" height="3"/><rect x="32" y="65" width="3" height="9"/><rect x="29.5" y="67.5" width="8" height="3"/><rect x="65" y="65" width="3" height="9"/><rect x="62.5" y="67.5" width="8" height="3"/></g>
+    </g>
+  </symbol>
+</defs></svg>
+
+<header id="hdr">
+  <div class="nav">
+    <a href="/" class="brand"><svg class="shield"><use href="#shield"/></svg><span>Connor <span class="macivor">MacIvor</span><small>AI With Honor</small></span></a>
+    <a href="/#book" class="btn">Book Connor</a>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+  <div class="post-hero">
+    <div class="crumb"><a href="/">Home</a> / <a href="/blog/">Field Notes</a> / AI Is Not a Neutral Judge</div>
+    <h1>AI Is Not a Neutral Judge, <em>and the Day You Treat It Like One, You Lose</em></h1>
+    <div class="post-meta">
+      <span>By Connor <span class="macivor">MacIvor</span></span>
+      <span class="dot">&bull;</span>
+      <span>July 5, 2026</span>
+      <span class="dot">&bull;</span>
+      <span>AI For The Rest Of Us</span>
+      <span class="dot">&bull;</span>
+      <span>9 min read</span>
+    </div>
+  </div>
+
+  <div class="video-frame">
+    <iframe src="https://www.youtube.com/embed/HSBc5a91amo" title="Why AI Can Never Settle Our Biggest Fights (Truth vs. Values)" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+  <div class="tldr">
+    <h2>TL;DR</h2>
+    <p>I put AI to work in real businesses every day, and here is the single rule that keeps it from steering me wrong. Let the machine own truth problems, the ones with a real answer out in the world, and never let it touch values problems, the ones where the answer depends on what you care about. The pitch you are hearing everywhere, that AI has no skin in the game so it can finally be our neutral judge, is exactly backwards. No skin in the game does not mean no side. AI learned its side from everything it read and got its rules from a company. When it sounds most calm and objective on a question of what is fair, that is the moment to check it, not trust it. Facts to the machine. Fairness stays with you.</p>
+  </div>
+
+  <article>
+    <p>There is a pitch going around, and it is seductive. It goes like this. We cannot agree on anything anymore, so let us hand the hard calls to artificial intelligence. It has no skin in the game. It is not on your team or the other team. Just feed it the facts and let it hand down the answer. Clean. Final. Fair.</p>
+
+    <p>I want to save you from that pitch, because I live in this tool. I am not a commentator watching from a distance. I deploy AI inside real companies, in real estate and voice systems and small shops that never had a tech budget. It writes with me, researches with me, and catches things I miss. I would not run my day without it. And I will tell you plainly: the day you treat it as a neutral judge is the day it quietly starts steering you, and you will not even feel the wheel move.</p>
+
+    <p>Here is the distinction that runs my whole practice. Every question you could ever ask splits into one of two buckets, and almost nobody names them out loud before they ask.</p>
+
+    <h2>Truth Problems Versus Values Problems</h2>
+
+    <p>A truth problem has a real answer sitting out in the world, whether anybody likes it or not. What did the three most comparable homes on this street actually close for. What does the math say about this risk. What happened the last five times a business tried this exact move. There is a right answer. You may not have it yet, but it exists, and finding it is a search. On a search, more horsepower wins. This is where the machine is a monster, and I let it run.</p>
+
+    <p>A values problem is a different animal. It is not asking what is true. It is asking what matters. What is a fair price to put in front of a family that has to move. Who deserves the benefit of the doubt. What is the right thing to do when two good things collide. There is no answer buried in any dataset, because the answer depends on what you value, and people value different things. No amount of computing power settles it, the same way no amount of horsepower helps a car climb a ladder. Wrong tool, wrong problem.</p>
+
+    <blockquote><p>No skin in the game does not mean no side. It just means the side is hidden, and a hidden side you cannot argue with is worse than one you can see.</p></blockquote>
+
+    <h2>Where I Let The Machine Drive</h2>
+
+    <p>On truth problems I hand it the keys without flinching. Summarize this 40-page disclosure and flag anything unusual. Pull the pattern out of two years of numbers. Draft the first version so I am editing instead of staring at a blank page. Run the downside math on this decision three different ways. Research the thing I do not know yet. It is fast, it is tireless, and it holds more facts at once than I ever could. On that work it earns its keep every single day, and if you are not using it there, you are leaving real money and real hours on the table.</p>
+
+    <h2>Where I Take The Wheel Back</h2>
+
+    <p>Then there is the other bucket, and this is where the discipline lives. Anything that comes down to fairness, trust, faith, or what I owe the people around me, I take back. The machine can lay the facts on the table for me. It does not get to make the call. Not because it is dumb, it is brilliant, but because the call was never a fact problem in the first place. It was a choice, and choices belong to the person who has to live with them.</p>
+
+    <p>I watched this play out across the biggest arguments we have as a country. Religion, whether one country should be allowed weapons another is denied, guns, race and policing, the split between the people who have and the people who work for a living. Every one of those looks like it might have a factual answer if you squint. Every one of them, underneath, is a values fight, a costume over a choice. Feed any of them to a machine and it can hand you numbers all day. It cannot hand you the tiebreaker, because the tiebreaker is not in the data. It is in what a human being decides to hold sacred. I have carried a badge and a firearm, and I am a man of faith, and even on the fights I have lived from the inside I do not get a clean answer from a machine, because there is not one to get.</p>
+
+    <h2>The Tell, And The Two-Question Test</h2>
+
+    <p>So how do you catch it in the act? Watch the confidence. When AI gives you a smooth, certain, reasonable-sounding answer about what is fair or right or who to trust, that smoothness is the trap, not the proof. It learned to sound sure from a mountain of humans who also sounded sure. And remember the part people forget: real people at real companies decide what the machine is allowed to say. So a values answer is an average of everything it read plus whatever a policy team chose, delivered in a voice that sounds like a calculator.</p>
+
+    <p>When it matters, run two questions on any answer that feels like a verdict:</p>
+
+    <ul>
+      <li><strong>What did it read to form this?</strong> If the topic is one humans have screamed about from every direction for centuries, the honest answer is that it read the screaming, and the screaming does not contain a tiebreaker.</li>
+      <li><strong>Who decided what it is allowed to say?</strong> Someone tuned this. On a sensitive question, that tuning is a thumb on the scale you cannot see.</li>
+    </ul>
+
+    <p>Ask those two, and the fake neutrality falls apart in your hands. Now you can take the answer for exactly what it is worth: one input, useful, not a ruling from a judge.</p>
+
+    <h2>The Bottom Line For A Regular Person</h2>
+
+    <p>You do not need to fear this tool and you do not need to worship it. You need to use it on purpose. Give it the truth problems and let it be great at them. Keep the values problems, and make those calls like the adult in the room, because you are. That single habit, splitting the question before you ask it, is the difference between AI making you sharper and AI slowly making your decisions for you while everyone claps for how neutral it sounds.</p>
+
+    <p>Facts to the machine. Fairness stays with you. That is the rule. It is simple enough to teach your kids, and most of the people selling you the opposite are hoping you never learn it.</p>
+  </article>
+
+  <div class="cta-band">
+    <h2>AI for everyone. <em>Used on purpose, not on autopilot.</em></h2>
+    <p>I teach the people the 20-year-olds skipped how to put AI to work without handing it the wheel. Keynotes, team training, and plain-language advisory for organizations and groups that want the truth without the hype.</p>
+    <a href="/#book" class="btn">Bring me to your stage</a>
+  </div>
+
+  <div class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <details><summary>Should I let AI make decisions for my business?</summary><p>Let it make the fact-based ones and keep the judgment calls for yourself. AI is excellent at the parts of a decision that have a real answer: what did the comparable homes actually sell for, what does the math say about a risk, what happened the last three times someone tried this. It is worthless and even dangerous on the parts that depend on what you value: what is a fair price to ask a family, who deserves the benefit of the doubt, what is the right thing to do. Feed it the facts, make the call yourself.</p></details>
+    <details><summary>Can I trust AI to be objective?</summary><p>No, and the word objective is where people get fooled. AI learned everything it knows from human writing, so it carries human bias, and the company that built it decides what it is allowed to say. When it answers a question about what is fair or right, you are getting an average of what it read plus what a policy team chose, delivered in a calm voice that sounds like a calculator. Objective sounding is not the same as objective.</p></details>
+    <details><summary>What tasks should I hand to AI right now?</summary><p>Hand it the truth problems: research, first drafts, summarizing long documents, pulling patterns out of data, running the numbers on a risk, catching things you missed. Keep the values problems: pricing that affects a real family, hiring and firing, anything about fairness, faith, or what you owe the people around you. The rule is simple. If the question has a real answer out in the world, let the machine chase it. If the answer depends on what you care about, you decide.</p></details>
+    <details><summary>How do I know when AI is bluffing me?</summary><p>Watch for confidence on a question that has no factual answer. When a machine gives you a smooth, certain response about what is fair, moral, or political, that smoothness is the tell, not the proof. Run the two-question test: what did it read to form this, and who decided what it is allowed to say. The moment you ask those, the fake neutrality falls apart and you can take the answer for what it is, one input, not a verdict.</p></details>
+    <details><summary>Is it foolish to ask AI moral or personal questions?</summary><p>It is fine to ask, as long as you never treat the answer as the final word. AI can lay out the considerations, show you angles you had not thought of, and organize your own thinking. What it cannot do is choose for you, because there is no correct answer sitting in the data. A value is chosen, not calculated. Use the machine to think, never to decide what you hold sacred.</p></details>
+    <details><summary>What is the one rule for using AI safely?</summary><p>Split every question before you ask it. Decide whether it is a truth problem, which has a real answer in reality, or a values problem, which depends on what you care about. Truth, let the machine drive and check its sources. Values, take the wheel and keep it. That single habit turns AI from a thing that can quietly steer you into a tool that makes you sharper. It is the whole rule.</p></details>
+  </div>
+
+  <div class="related">
+    <h3>Keep Reading</h3>
+    <a href="https://connorwithhonor.com/blog/2026-141-the-king-nobody-voted-for/" target="_blank" rel="noopener">The King Nobody Voted For &mdash; the full Daily Download essay</a>
+    <a href="https://godisnotthemachine.com/blog/the-machine-cannot-judge-your-faith.html" target="_blank" rel="noopener">The Machine Cannot Judge Your Faith</a>
+    <a href="/blog/what-is-ai-explained-in-plain-english/">What Is AI, Really? A Plain-English Guide</a>
+    <a href="/blog/">&larr; All Field Notes</a>
+  </div>
+</div>
+</main>
+
+<footer>
+  <div class="foot-in">
+    <div class="foot-brand"><svg class="shield"><use href="#shield"/></svg><span>Connor <span class="macivor">MacIvor</span></span></div>
+    <p style="color:var(--ink-soft);max-width:40ch;font-size:.92rem;">AI for everyone. Not just the wealthy.</p>
+    <div class="foot-links">
+      <a href="/">Home</a><a href="/blog/">Field Notes</a><a href="/#method">How I Think</a><a href="/#book">Book Connor</a>
+      <a href="https://www.youtube.com/@ConnorMacIvor" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://connorwithhonor.com" target="_blank" rel="noopener">connorwithhonor.com</a>
+    </div>
+    <div class="foot-bottom">&copy; 2026 Connor <span class="macivor">MacIvor</span>. Santa Clarita, CA. Call or text (661) 400-1720. A human answers.</div>
+  </div>
+</footer>
+
+<script>
+  const hdr=document.getElementById('hdr');
+  addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>40));
+</script>
+<script src="https://api.honorelevate.com/js/form_embed.js"></script>
+</body>
+</html>
