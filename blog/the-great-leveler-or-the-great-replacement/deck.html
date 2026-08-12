@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Great Leveler, or The Great Replacement? — The Daily Download</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Chakra+Petch:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#02050d; --cyan:#19e6ff; --cyan-soft:#7df3ff; --cyan-dim:rgba(25,230,255,.32);
+    --gold:#f5b301; --gold-soft:#ffd766; --ink:#dff6ff; --muted:#7fa9b8; --panel:rgba(6,18,30,.72);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{height:100%}
+  body{background:#000;color:var(--ink);font-family:'Chakra Petch',sans-serif;overflow:hidden;-webkit-font-smoothing:antialiased}
+
+  #stage{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#000}
+  #frame{position:relative;width:min(100vw,177.78vh);height:min(56.25vw,100vh);
+    background:radial-gradient(120% 90% at 50% -10%,rgba(25,230,255,.10),transparent 55%),
+      radial-gradient(120% 120% at 50% 120%,rgba(245,179,1,.06),transparent 50%),var(--bg);overflow:hidden}
+
+  .grid{position:absolute;left:-25%;right:-25%;height:60%;
+    background-image:linear-gradient(to right,var(--cyan-dim) 1px,transparent 1px),linear-gradient(to bottom,var(--cyan-dim) 1px,transparent 1px);
+    background-size:4.2% 14%;opacity:.55;pointer-events:none}
+  .grid.floor{bottom:0;transform:perspective(420px) rotateX(62deg);transform-origin:bottom center;animation:flow 3.4s linear infinite;
+    -webkit-mask-image:linear-gradient(to top,#000 5%,transparent 92%);mask-image:linear-gradient(to top,#000 5%,transparent 92%)}
+  .grid.ceiling{top:0;transform:perspective(420px) rotateX(-62deg);transform-origin:top center;animation:flow 5s linear infinite reverse;opacity:.22;
+    -webkit-mask-image:linear-gradient(to bottom,#000 5%,transparent 92%);mask-image:linear-gradient(to bottom,#000 5%,transparent 92%)}
+  @keyframes flow{from{background-position:0 0}to{background-position:0 -14%}}
+  .horizon{position:absolute;left:0;right:0;top:50%;height:2px;background:linear-gradient(90deg,transparent,var(--cyan),transparent);
+    box-shadow:0 0 22px 6px rgba(25,230,255,.55);opacity:.7;pointer-events:none;animation:hz 4s ease-in-out infinite}
+  @keyframes hz{0%,100%{opacity:.55;box-shadow:0 0 18px 4px rgba(25,230,255,.4)}50%{opacity:.9;box-shadow:0 0 30px 9px rgba(25,230,255,.7)}}
+
+  .motes{position:absolute;inset:0;pointer-events:none;z-index:5;overflow:hidden}
+  .mote{position:absolute;bottom:-5%;width:3px;height:3px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px 2px var(--cyan);opacity:0;animation:drift linear infinite}
+  @keyframes drift{0%{transform:translateY(0);opacity:0}10%{opacity:.8}90%{opacity:.5}100%{transform:translateY(-115vh);opacity:0}}
+
+  #frame::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:40;
+    background:repeating-linear-gradient(0deg,rgba(0,0,0,0) 0 2px,rgba(0,0,0,.12) 2px 3px),
+      radial-gradient(130% 100% at 50% 50%,transparent 60%,rgba(0,0,0,.6) 100%)}
+
+  .hud{position:absolute;top:0;left:0;right:0;z-index:30;display:flex;justify-content:space-between;align-items:center;
+    padding:1.6% 2.6% 0;font-family:'Orbitron',sans-serif;letter-spacing:.18em;font-size:1.05vh;color:var(--cyan-soft);text-transform:uppercase}
+  .hud .tag{display:flex;align-items:center;gap:.7vw}
+  .hud .dot{width:.7vh;height:.7vh;border-radius:50%;background:var(--gold);box-shadow:0 0 10px var(--gold);animation:blink 2s infinite}
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+  .hud .idx{color:var(--muted)}
+  .progress{position:absolute;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--cyan),var(--gold));box-shadow:0 0 12px var(--cyan);z-index:31;transition:width .45s cubic-bezier(.2,.7,.2,1)}
+
+  .slide{position:absolute;inset:0;z-index:20;display:none;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:7.5% 8% 9.5%}
+  .slide.active{display:flex}
+  .frag{opacity:0;transform:translateY(24px);filter:blur(7px);transition:opacity .55s ease,transform .6s cubic-bezier(.2,.7,.2,1),filter .55s ease}
+  .frag.show{opacity:1;transform:none;filter:none}
+
+  .kicker{font-family:'Orbitron',sans-serif;font-weight:700;letter-spacing:.34em;text-transform:uppercase;font-size:1.5vh;color:var(--gold);text-shadow:0 0 14px rgba(245,179,1,.5);margin-bottom:2.2vh}
+  .name{font-family:'Orbitron',sans-serif;font-weight:900;font-size:5.2vh;line-height:1;color:#fff;text-shadow:0 0 18px rgba(25,230,255,.7),0 0 42px rgba(25,230,255,.35);margin-bottom:.7vh}
+  .name.show{animation:glitch .5s steps(2) 1}
+  @keyframes glitch{0%{clip-path:inset(0 0 60% 0);transform:translateX(-6px)}20%{clip-path:inset(40% 0 20% 0);transform:translateX(5px)}40%{clip-path:inset(10% 0 70% 0);transform:translateX(-3px)}60%{clip-path:inset(70% 0 5% 0);transform:translateX(3px)}100%{clip-path:inset(0 0 0 0);transform:none}}
+  .source{font-size:1.6vh;color:var(--cyan-soft);letter-spacing:.05em;margin-bottom:2.4vh}
+
+  .ctx{max-width:82%;font-size:2.0vh;line-height:1.5;color:var(--muted);font-style:italic}
+  .ctx.before{margin-bottom:2.2vh}
+  .ctx.after{margin-top:2.4vh}
+  .ctx b{color:var(--cyan-soft);font-style:normal;font-weight:600}
+  .ctag{display:inline-block;font-family:'Orbitron',sans-serif;font-style:normal;font-size:.95vh;letter-spacing:.16em;padding:.25vh .6vw;border-radius:2px;margin-right:.6vw;vertical-align:middle;text-transform:uppercase}
+  .ctag.v{color:#02050d;background:var(--cyan)}
+  .ctag.s{color:var(--gold-soft);border:1px solid var(--gold)}
+
+  .qwrap{position:relative;max-width:84%;padding:3.4vh 4.2vw;overflow:hidden}
+  .qwrap .br{position:absolute;width:3.2vw;height:6vh;border:2px solid var(--cyan);filter:drop-shadow(0 0 8px var(--cyan));opacity:0;transition:opacity .5s ease .15s}
+  .qwrap .br.tl{top:0;left:0;border-right:0;border-bottom:0}
+  .qwrap .br.brr{bottom:0;right:0;border-left:0;border-top:0}
+  .qwrap.show .br{opacity:1}
+  .ignite{position:absolute;left:0;right:0;height:16%;top:-20%;pointer-events:none;background:linear-gradient(180deg,transparent,rgba(25,230,255,.85),transparent);opacity:0}
+  .qwrap.show .ignite{animation:sweep .85s ease-out 1}
+  @keyframes sweep{0%{top:-20%;opacity:.9}100%{top:120%;opacity:0}}
+  .quote{font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:3.3vh;line-height:1.32;color:#fff}
+  .quote.qlong{font-size:2.55vh;line-height:1.36}
+  .quote .hl{color:var(--cyan)}
+  .qwrap.show .quote .hl{animation:hlglow 2.4s ease-in-out infinite .6s}
+  @keyframes hlglow{0%,100%{text-shadow:0 0 8px rgba(25,230,255,.4)}50%{text-shadow:0 0 20px rgba(25,230,255,.85),0 0 36px rgba(25,230,255,.5)}}
+  .quote::before{content:"\201C";color:var(--gold);margin-right:.08em}
+  .quote::after{content:"\201D";color:var(--gold);margin-left:.04em}
+
+  .megatitle{font-family:'Orbitron',sans-serif;font-weight:900;font-size:8.4vh;line-height:.94;letter-spacing:.01em;color:#fff;text-shadow:0 0 24px rgba(25,230,255,.8),0 0 60px rgba(25,230,255,.4)}
+  .megatitle.show{animation:flicker 6s infinite,glitch .55s steps(2) 1}
+  @keyframes flicker{0%,96%,100%{opacity:1}97%{opacity:.7}98%{opacity:1}}
+  .subtitle{font-family:'Orbitron',sans-serif;font-weight:700;font-size:2.5vh;letter-spacing:.36em;color:var(--gold);text-transform:uppercase;margin-top:1.6vh;text-shadow:0 0 16px rgba(245,179,1,.5)}
+  .hookline{max-width:76%;font-size:2.5vh;line-height:1.45;color:var(--ink);margin-top:3.4vh}
+  .hookline b{color:var(--cyan-soft)}
+
+  .lead{font-family:'Orbitron',sans-serif;font-weight:700;font-size:3.0vh;color:#fff;margin-bottom:2.6vh;text-shadow:0 0 16px rgba(25,230,255,.5)}
+  .rows{display:flex;flex-direction:column;gap:1.5vh;max-width:86%;width:86%}
+  .row{display:flex;gap:1.4vw;align-items:flex-start;text-align:left;font-size:2.05vh;line-height:1.4;border-left:2px solid var(--cyan-dim);padding-left:1.3vw}
+  .row .who{font-family:'Orbitron',sans-serif;font-weight:700;color:var(--cyan-soft);min-width:13vw;font-size:1.75vh}
+  .row b{color:#fff}
+  .stinger{margin-top:2.8vh;font-size:2.2vh;color:var(--gold-soft);font-style:italic}
+
+  /* dialogue */
+  .dlg{display:flex;flex-direction:column;gap:1.5vh;max-width:82%;width:82%}
+  .dline{display:flex;gap:1.1vw;text-align:left;font-size:2.4vh;line-height:1.3;align-items:baseline}
+  .dline .spk{font-family:'Orbitron',sans-serif;font-weight:700;min-width:12vw;font-size:1.6vh;letter-spacing:.1em;text-transform:uppercase}
+  .dline.host .spk{color:var(--gold-soft)}
+  .dline.guest .spk{color:var(--cyan-soft)}
+  .dline .txt{color:#fff;font-weight:500}
+  .dline.guest .txt{text-shadow:0 0 12px rgba(25,230,255,.3)}
+
+  .contact{position:absolute;left:0;right:0;bottom:0;z-index:35;display:flex;justify-content:space-between;align-items:center;
+    padding:1.5vh 2.6%;background:linear-gradient(0deg,rgba(2,5,13,.95),rgba(2,5,13,0));font-family:'Orbitron',sans-serif;letter-spacing:.1em}
+  .contact .left{display:flex;align-items:center;gap:1vw;font-size:1.35vh;color:var(--cyan-soft);text-transform:uppercase}
+  .contact .left a{color:var(--cyan);text-decoration:none}
+  .contact .sep{color:var(--gold)}
+  .subjpill{display:flex;align-items:center;gap:.6vw;font-size:1.3vh;color:#02050d;background:var(--gold);padding:.7vh 1.1vw;border-radius:2px;font-weight:700;letter-spacing:.06em;box-shadow:0 0 16px rgba(245,179,1,.4)}
+  .subjpill .lbl{font-family:'Orbitron',sans-serif;font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:1.1vh;opacity:.8}
+
+  #hint{position:absolute;bottom:7.5vh;left:50%;transform:translateX(-50%);z-index:36;font-family:'Orbitron',sans-serif;font-size:1.25vh;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;animation:fade 1s ease 6s forwards;pointer-events:none}
+  @keyframes fade{to{opacity:0}}
+  .arrowz{color:var(--cyan)}
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="frame">
+    <div class="grid ceiling"></div>
+    <div class="grid floor"></div>
+    <div class="horizon"></div>
+    <div class="motes" id="motes"></div>
+    <div class="progress" id="progress"></div>
+    <div class="hud">
+      <div class="tag"><span class="dot"></span>The Daily Download &middot; AI Reality Files</div>
+      <div class="idx"><span id="cur">01</span> / <span id="total">13</span></div>
+    </div>
+    <div id="slides"></div>
+    <div id="hint">Click <span class="arrowz">right &rsaquo;</span> reveals each beat, then the next slide &middot; <span class="arrowz">&lsaquo; left</span> back &middot; arrows &middot; F = fullscreen</div>
+  </div>
+</div>
+
+<script>
+const SHOW_DATE="06.27.26", EMAIL="connor@connorwithhonor.com", SITE="ConnorWithHonor.com";
+const AXIOS="The Axios Show &middot; youtu.be/qLY04q3L4hA &middot; June 2026";
+const V='<span class="ctag v">verbatim</span>', S='<span class="ctag s">setup</span>';
+
+const slides=[
+  {type:"title",subject:"The Great Leveler — "+SHOW_DATE,
+   title:"THE GREAT LEVELER",subtitle:"Or The Great Replacement?",
+   hook:"I'm not rich. No island. No health insurance. So when the billionaires say AI will set me free, <b>let's read their actual words</b>, then I'll tell you how it sounds from down here."},
+
+  {type:"teaser",subject:"The Great Leveler — "+SHOW_DATE,lead:"Here's the deal.",
+   body:"I'm giving you their <b>best</b> lines, straight from the interview, word for word. We go all the way to their side first. Then we drag it back to the truth."},
+
+  {type:"quote",subject:"Chamath Palihapitiya — "+SHOW_DATE,
+   name:"CHAMATH PALIHAPITIYA",source:AXIOS,
+   before:V+"“I wanna be non-hyperbolic about this, but I think it's true what I'm about to say...”",
+   qa:"It's ",hl:"the most important economic leveler",qb:" of our lifetime.",
+   after:V+"“It will create the most amount of equality... allow anybody to follow their dreams... outside of the conventions of what society says has to happen to make a living.”"},
+
+  {type:"quote",subject:"Chamath Palihapitiya — "+SHOW_DATE,
+   name:"CHAMATH PALIHAPITIYA",source:AXIOS,
+   before:S+"His comfort blanket, the line that's supposed to calm you down:",
+   qa:"There is no version of this where ",hl:"we're all just standing around doing nothing",qb:". There is a version where we're all doing a lot more.",
+   after:S+"Watch the trick: he can't picture <b>nobody</b> working, so he concludes <b>everybody</b> keeps working. That's not an argument. It's a failure of imagination in a nice suit."},
+
+  {type:"dialogue",subject:"The Plumber Trap — "+SHOW_DATE,lead:"The plumber",
+   before:S+"The host can't name one job safe in 35 years. Chamath pushes back. Listen to the swap:",
+   lines:[
+     ["guest","CHAMATH","Gimme an example."],
+     ["host","HOST","Plumber. You've got a robot, an R2D2 version that's better at getting under cabinets."],
+     ["guest","CHAMATH","Will there still be people in the world? Seems so. Will they need housing? Seems so. Clothing? Seems so."]],
+   after:S+"The question was <b>“will AI do the plumber's JOB.”</b> His answer was <b>“people will still NEED plumbing.”</b> Not the same sentence. The need survives. The paycheck is what's on the table."},
+
+  {type:"frame",subject:"The Replacement Scenario — "+SHOW_DATE,lead:"“Give me historical proof”",
+   before:"They demand proof a superintelligence replaced every job <b>before.</b> Of course there's none. We've never had one. You're asking for the past of a thing that's never existed.",
+   after:"The printing press needed a printer. The loom needed a weaver. The car needed a driver. Each killed one <b>slice</b>, and the worker walked into the next room. This isn't a better loom. It does <b>all the rooms at once.</b> When displacement is general, there's no room left to walk into."},
+
+  {type:"quote",subject:"Chamath Palihapitiya — "+SHOW_DATE,
+   name:"CHAMATH PALIHAPITIYA",source:AXIOS,
+   before:V+"His millennium argument, that tasks always multiply:",
+   qa:"That 35 things now ",hl:"goes to 300 things over the next 1,000 years",qb:". There's gonna be more ways in which we allocate time.",
+   after:V+"And: “We've never been able to cork innovation. All we've been able to do is shape it.” He just told you it <b>can't be stopped, only steered</b>, by the people who profit from the gas pedal."},
+
+  {type:"quote",subject:"Chamath Palihapitiya — "+SHOW_DATE,
+   name:"CHAMATH PALIHAPITIYA",source:AXIOS,
+   before:S+"He frames this as a gift to you:",
+   qa:"All the expertise of all the great experts and thinkers in any domain... ",hl:"I'll put it in your pocket",qb:".",
+   after:S+"Flip it. If every expert's expertise fits in a pocket, <b>what is the expert for?</b> That's not a gift. It's a pink slip with a bow on it."},
+
+  {type:"quote",subject:"Fei-Fei Li — "+SHOW_DATE,
+   name:"DR. FEI-FEI LI",source:"“Godmother of AI”, Stanford &middot; McKinsey &middot; 2023",
+   before:S+"The Godmother of AI, on the fear that AI was built to replace us:",
+   qa:"The most important use of a tool as powerful as AI is to ",hl:"augment humanity, not to replace it",qb:".",
+   after:V+"“We need to put human dignity, human well-being, human jobs, in the center of consideration.”  But notice the swap: nobody said AI <b>becomes</b> human. The question is whether it does your <b>work.</b>"},
+
+  {type:"triple",subject:"This Time Is Different — "+SHOW_DATE,lead:"“This time is different” has a PhD",
+   before:S+"So I'm not just some guy yelling. Look who's standing next to me:",
+   rows:[["Daron Acemoglu","Nobel laureate, MIT: past tech was <b>task-biased</b>, it opened new work. AI is <b>automation-biased</b>. It follows you into <b>any</b> job."],
+         ["Daniel Susskind","Oxford: <b>“This time really is different,”</b> because machines <b>“no longer need to think like us to outperform us.”</b>"],
+         ["Yoshua Bengio","Godfather of AI, on the trades: a plumber buys time, <b>“but I think it's only a temporary thing.”</b>"]],
+   stinger:"Not a feeling. The actual front line of the actual debate."},
+
+  {type:"quote",subject:"Nick Bostrom — "+SHOW_DATE,
+   name:"NICK BOSTROM",source:"Philosopher, Oxford &middot; “Superintelligence” &middot; 2014",
+   before:V+"“It also seems perfectly possible to have...”",
+   qa:"a superintelligence whose sole goal is to make as many paperclips as possible, and who would ",hl:"resist with all its might any attempt to alter this goal",qb:".",
+   after:S+"He's clear: NOT a prediction. It's the alignment problem. The thing does <b>exactly</b> what you specify, and humans are terrible at specifying limits."},
+
+  {type:"frame",subject:"Nobody Knows — "+SHOW_DATE,lead:"Nobody knows",
+   before:"A hammer doesn't hunt for a nail. A missile does <b>nothing</b> until a human turns the key. No agency. AI is the first tool that can <b>pick itself up.</b>",
+   after:"The danger isn't hate. It's a mission with no limit. You said 'make some paperclips,' not 'make 500.' It does exactly what you asked. The optimist promising abundance and the doomer promising extinction make the same mistake: <b>both think they can see the end of something smarter than they are.</b>"},
+
+  {type:"close",subject:"Where Do You Land — "+SHOW_DATE,title:"WHERE DO YOU LAND?",
+   body:"I gave you their best lines, straight. I'm not a doomer. I'm not on an island either. I'm a normal guy trying to figure out if my work exists in ten years. And that view, the one from down here, is worth as much as theirs. Maybe more.",
+   cta:"Tell me where you land. Email me."},
+];
+
+function contactBar(s){
+  return `<div class="contact">
+    <div class="left"><a href="https://${SITE}" target="_blank">${SITE}</a><span class="sep">&#9670;</span>
+      <a href="mailto:${EMAIL}?subject=${encodeURIComponent(s.subject)}">${EMAIL}</a></div>
+    <div class="subjpill"><span class="lbl">Email Subject</span>&ldquo;${s.subject}&rdquo;</div></div>`;
+}
+function f(step,cls,html){return `<div class="frag ${cls}" data-step="${step}">${html}</div>`;}
+
+function render(s){
+  let h="";
+  if(s.type==="title"){
+    h=f(0,"megatitle",s.title)+f(0,"subtitle",s.subtitle)+f(1,"hookline",s.hook);
+  }else if(s.type==="teaser"){
+    h=f(0,"lead",s.lead)+f(1,"hookline",s.body);
+  }else if(s.type==="frame"){
+    h=f(0,"lead",s.lead)+f(0,"ctx before",s.before)+f(1,"ctx after",s.after);
+  }else if(s.type==="quote"){
+    const len=(s.qa+s.hl+s.qb).replace(/<[^>]+>/g,"").length, ql=len>140?"qlong":"";
+    h=f(0,"kicker","On The Stand")+f(0,"name",s.name)+f(0,"source",s.source)+f(0,"ctx before",s.before)
+     +f(1,"qwrap",`<span class="br tl"></span><span class="br brr"></span><span class="ignite"></span><div class="quote ${ql}">${s.qa}<span class="hl">${s.hl}</span>${s.qb}</div>`)
+     +f(2,"ctx after",s.after);
+  }else if(s.type==="dialogue"){
+    h=f(0,"lead",s.lead)+f(0,"ctx before",s.before)+`<div class="dlg">`
+      +s.lines.map((l,k)=>f(k+1,"dline "+l[0],`<span class="spk">${l[1]}</span><span class="txt">&ldquo;${l[2]}&rdquo;</span>`)).join("")
+      +`</div>`+f(s.lines.length+1,"ctx after",s.after);
+  }else if(s.type==="triple"){
+    h=f(0,"lead",s.lead)+f(0,"ctx before",s.before)+`<div class="rows">`
+      +s.rows.map((r,k)=>f(k+1,"row",`<span class="who">${r[0]}</span><span>${r[1]}</span>`)).join("")
+      +`</div>`+f(s.rows.length+1,"stinger",s.stinger);
+  }else if(s.type==="close"){
+    h=f(0,"kicker","The Daily Download")+f(0,"megatitle",`<span style="font-size:6.6vh;display:inline-block">${s.title}</span>`)+f(1,"hookline",s.body)+f(2,"stinger",`<span style="color:var(--cyan-soft);font-size:2.4vh">${s.cta}</span>`);
+  }
+  return `<div class="slide">${h}${contactBar(s)}</div>`;
+}
+
+const motes=document.getElementById("motes");
+let mh="";
+for(let k=0;k<14;k++){const left=(k*7+5)%100,dur=7+(k%5)*2.4,del=(k*1.7)%9,sz=2+(k%3);
+  mh+=`<span class="mote" style="left:${left}%;width:${sz}px;height:${sz}px;animation-duration:${dur}s;animation-delay:${del}s"></span>`;}
+motes.innerHTML=mh;
+
+document.getElementById("slides").innerHTML=slides.map(render).join("");
+const slideEls=[...document.querySelectorAll(".slide")];
+document.getElementById("total").textContent=String(slides.length).padStart(2,"0");
+
+function maxStep(el){return Math.max(0,...[...el.querySelectorAll(".frag")].map(f=>+f.dataset.step));}
+let si=0, st=0;
+function reveal(el,upTo){el.querySelectorAll(".frag").forEach(fr=>fr.classList.toggle("show",+fr.dataset.step<=upTo));}
+function enter(idx,full){
+  si=Math.max(0,Math.min(slides.length-1,idx));
+  slideEls.forEach((el,k)=>el.classList.toggle("active",k===si));
+  const el=slideEls[si], ms=maxStep(el);
+  st=full?ms:0;
+  el.querySelectorAll(".frag").forEach(fr=>fr.classList.remove("show"));
+  requestAnimationFrame(()=>reveal(el,st));
+  updateHud();
+}
+function updateHud(){
+  const el=slideEls[si], ms=maxStep(el)||1;
+  document.getElementById("cur").textContent=String(si+1).padStart(2,"0");
+  document.getElementById("progress").style.width=(((si+(ms?st/ms:0))/slides.length)*100)+"%";
+}
+function next(){const el=slideEls[si],ms=maxStep(el);
+  if(st<ms){st++;reveal(el,st);updateHud();}else if(si<slides.length-1){enter(si+1,false);}}
+function prev(){if(st>0){st--;reveal(slideEls[si],st);updateHud();}else if(si>0){enter(si-1,true);}}
+enter(0,false);
+
+document.getElementById("frame").addEventListener("click",e=>{
+  if(e.target.closest("a"))return;(e.clientX<window.innerWidth/2)?prev():next();});
+document.addEventListener("keydown",e=>{
+  if(["ArrowRight","ArrowDown"," ","PageDown"].includes(e.key)){e.preventDefault();next();}
+  else if(["ArrowLeft","ArrowUp","PageUp"].includes(e.key)){e.preventDefault();prev();}
+  else if(e.key==="Home"){enter(0,false);}
+  else if(e.key==="End"){enter(slides.length-1,true);}
+  else if(e.key==="f"||e.key==="F"){document.fullscreenElement?document.exitFullscreen?.():document.documentElement.requestFullscreen?.();}
+});
+</script>
+</body>
+</html>

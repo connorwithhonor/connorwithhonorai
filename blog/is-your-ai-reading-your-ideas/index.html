@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Is Your AI Reading Your Ideas? What Is Real, What Is Hype | Connor MacIvor</title>
+<meta name="description" content="The new fear is that when you use a public AI to work out an idea, the company can see your intellectual property and move on it first. A working operator separates what is real from what is hype: the data-center reversal, why privacy already left the building, and whether you actually need to buy your own AI at home.">
+<meta name="author" content="Connor MacIvor">
+<link rel="canonical" href="https://connorwithhonorai.com/blog/is-your-ai-reading-your-ideas/">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Is Your AI Reading Your Ideas? What Is Real, What Is Hype">
+<meta property="og:description" content="The fear that AI is stealing your ideas, the data-center reversal, and the buy-your-own-AI pitch, translated for the rest of us by a guy who deploys this every day.">
+<meta property="og:url" content="https://connorwithhonorai.com/blog/is-your-ai-reading-your-ideas/">
+<meta property="og:image" content="https://connorwithhonorai.com/img/is-your-ai-reading-your-ideas-og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-07-06">
+<meta property="article:author" content="Connor MacIvor">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Is Your AI Reading Your Ideas?">
+<meta name="twitter:description" content="What is real, what is hype, and what a regular person should actually do about it.">
+<meta name="twitter:image" content="https://connorwithhonorai.com/img/is-your-ai-reading-your-ideas-og.png">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 110'%3E%3Cpath d='M50 4 L92 18 V52 C92 78 72 96 50 106 C28 96 8 78 8 52 V18 Z' fill='%23c9a23a'/%3E%3Cg fill='%2314110b'%3E%3Crect x='46' y='28' width='8' height='54'/%3E%3Crect x='26' y='51' width='48' height='8'/%3E%3C/g%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BlogPosting",
+  "headline":"Is Your AI Reading Your Ideas? What Is Real, What Is Hype",
+  "description":"A working operator separates what is real from what is hype in the fear that public AI can see your intellectual property, the data-center reversal, and the buy-your-own-AI pitch.",
+  "image":"https://connorwithhonorai.com/img/is-your-ai-reading-your-ideas-og.png",
+  "datePublished":"2026-07-06",
+  "dateModified":"2026-07-06",
+  "author":{"@type":"Person","name":"Connor MacIvor","url":"https://connorwithhonorai.com"},
+  "publisher":{"@type":"Person","name":"Connor MacIvor","logo":{"@type":"ImageObject","url":"https://connorwithhonorai.com/img/connor-tux.png"}},
+  "mainEntityOfPage":{"@type":"WebPage","@id":"https://connorwithhonorai.com/blog/is-your-ai-reading-your-ideas/"},
+  "keywords":"is AI reading my ideas, does AI steal your ideas, AI intellectual property, AI privacy, buy your own local AI, data center reversal, AI for beginners, local LLM at home, is ChatGPT private"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"VideoObject",
+  "name":"The Shopping Cart Test: A Retired Cop on Safety, AI, and Getting Played",
+  "description":"Connor MacIvor covers reading a neighborhood, the AI data-center reversal and the fear that AI reads your ideas, and the Pelosi hit-and-run from a traffic cop's perspective.",
+  "thumbnailUrl":"https://connorwithhonorai.com/img/is-your-ai-reading-your-ideas-og.png",
+  "uploadDate":"2026-07-06",
+  "contentUrl":"https://www.loom.com/share/86b5a5294e9544778e4ae7793b9f59e4",
+  "embedUrl":"https://www.loom.com/embed/86b5a5294e9544778e4ae7793b9f59e4"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Can AI companies actually steal my business idea?","acceptedAnswer":{"@type":"Answer","text":"The fear being sold is that when you develop an idea inside a public model, the company behind it can see your intellectual property and act on it before you do. In the physical world, where you still have to build the thing, that mostly does not play out like the scary version. What is true and worth acting on is simpler: anything you type into a public tool is not private. Keep genuinely sensitive plans out of public AI, and treat everything you enter as if it were logged, because it may well be."}},
+    {"@type":"Question","name":"Is anything I type into ChatGPT, Claude, or Gemini private?","acceptedAnswer":{"@type":"Answer","text":"Treat it as not private, even in incognito or private chat modes. The entire public internet was already scraped to train these systems, the labs are now short on fresh data and generating synthetic data to keep training, and you signed lengthy terms for nearly every device and app you own without reading them. Privacy in the everyday sense already left the building. The move is to be deliberate about what you feed a public tool, not to panic."}},
+    {"@type":"Question","name":"What is the AI data-center reversal?","acceptedAnswer":{"@type":"Answer","text":"For a couple of years the story was that everyone had to build enormous data centers full of compute. Now some of the companies sitting on that compute are renting it out to the AI labs instead, and the market rewarded the move. It raises a real question about whether all the money poured into building it out was necessary, and whether the next leap in AI is more rooms full of chips or just one or two better ideas and smarter designs."}},
+    {"@type":"Question","name":"Should I buy my own AI machine to run at home?","acceptedAnswer":{"@type":"Answer","text":"For some people and some sensitive work, a local model on your own hardware makes real sense, because your inputs never leave the house. But notice the pattern before you spend. The same industry telling us it needs less data-center capacity is also part of why the memory and chips those home machines depend on keep getting more expensive. Decide based on whether you actually handle sensitive data, not because a fear headline told you to buy hardware."}},
+    {"@type":"Question","name":"How should a small business use public AI safely?","acceptedAnswer":{"@type":"Answer","text":"Use it heavily for the work that is not sensitive: research, drafts, summaries, customer replies, learning. For the crown-jewel material, your secret formula, unfiled inventions, client financials, either keep it out of public tools entirely or use an enterprise tier with a no-training data agreement, or run a local model. The rule of thumb is to use the machine to think and build, without confessing to it the one thing that makes you special."}}
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --bg:#0a0a0c;--bg-2:#101015;--panel:#141419;
+    --ink:#f3efe6;--ink-soft:#a7a097;--ink-faint:#6b665d;
+    --gold:#c9a23a;--gold-bright:#e7c25a;--gold-deep:#8c6f24;--cyan:#3fb6c4;
+    --line:rgba(201,162,58,.18);--line-soft:rgba(243,239,230,.08);
+    --serif:'Fraunces',Georgia,serif;--sans:'Inter',system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  .macivor{font-family:var(--serif);font-weight:600;}
+  ::selection{background:var(--gold);color:#0a0a0c;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:760px;margin:0 auto;padding:0 clamp(20px,5vw,40px);}
+  .shield{display:inline-block;vertical-align:middle;}
+  header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .4s,padding .4s,border-color .4s;border-bottom:1px solid transparent;padding:18px 0;}
+  header.scrolled{background:rgba(10,10,12,.86);backdrop-filter:blur(14px);padding:11px 0;border-bottom:1px solid var(--line);}
+  .nav{max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,56px);display:flex;align-items:center;justify-content:space-between;}
+  .brand{display:flex;align-items:center;gap:13px;font-family:var(--serif);font-size:1.12rem;font-weight:600;}
+  .brand .shield{width:24px;}
+  .brand small{font-family:var(--mono);font-size:.58rem;letter-spacing:.3em;color:var(--gold);display:block;text-transform:uppercase;font-weight:500;margin-top:2px;}
+  .nav .btn{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;padding:11px 20px;border:1px solid var(--gold);color:var(--gold);transition:all .3s;}
+  .nav .btn:hover{background:var(--gold);color:#0a0a0c;}
+  .post-hero{padding:140px 0 30px;}
+  .crumb{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:26px;}
+  .crumb a{color:var(--gold);}
+  .post-hero h1{font-family:var(--serif);font-weight:900;line-height:1.06;letter-spacing:-.015em;font-size:clamp(2rem,5.4vw,3.4rem);margin-bottom:22px;}
+  .post-hero h1 em{font-style:italic;color:var(--gold-bright);font-weight:500;}
+  .post-meta{display:flex;gap:18px;flex-wrap:wrap;align-items:center;font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;color:var(--ink-faint);text-transform:uppercase;border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);padding:16px 0;}
+  .post-meta .dot{color:var(--gold);}
+  .video-frame{position:relative;width:100%;aspect-ratio:16/9;margin:36px 0;border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.5);}
+  .video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+  .tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:8px;padding:26px 30px;margin:36px 0;}
+  .tldr h2{font-family:var(--mono);font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+  .tldr p{color:var(--ink-soft);font-size:1.02rem;}
+  article{font-size:1.1rem;}
+  article p{margin:0 0 24px;color:#e8e3d8;}
+  article h2{font-family:var(--serif);font-weight:900;font-size:clamp(1.6rem,3.4vw,2.2rem);line-height:1.12;letter-spacing:-.01em;margin:52px 0 20px;}
+  article h3{font-family:var(--serif);font-weight:600;font-size:1.4rem;margin:38px 0 14px;color:var(--ink);}
+  article strong{color:var(--gold-bright);font-weight:600;}
+  article a{color:var(--gold);border-bottom:1px solid var(--line);transition:border-color .3s;}
+  article a:hover{border-color:var(--gold);}
+  article ul{margin:0 0 24px;padding-left:22px;color:#e8e3d8;}
+  article li{margin-bottom:10px;}
+  blockquote{border-left:2px solid var(--gold);padding:6px 0 6px 26px;margin:34px 0;}
+  blockquote p{font-family:var(--serif);font-style:italic;font-size:1.4rem;line-height:1.4;color:var(--ink);margin:0;}
+  .faq{border-top:1px solid var(--line);margin-top:56px;padding-top:40px;}
+  .faq h2{font-family:var(--serif);font-weight:900;font-size:1.9rem;margin-bottom:24px;}
+  details{border-bottom:1px solid var(--line-soft);padding:18px 0;}
+  summary{font-family:var(--serif);font-size:1.12rem;font-weight:600;cursor:pointer;list-style:none;color:var(--ink);display:flex;justify-content:space-between;gap:16px;}
+  summary::-webkit-details-marker{display:none;}
+  summary::after{content:"+";color:var(--gold);font-family:var(--mono);}
+  details[open] summary::after{content:"\2212";}
+  details p{margin:14px 0 4px;color:var(--ink-soft);font-size:1rem;}
+  .cta-band{background:linear-gradient(180deg,var(--bg-2),var(--bg));border:1px solid var(--line);border-radius:10px;padding:40px;margin:56px 0;text-align:center;}
+  .cta-band h2{font-family:var(--serif);font-weight:900;font-size:1.8rem;margin-bottom:14px;}
+  .cta-band h2 em{font-style:italic;color:var(--gold-bright);font-weight:500;}
+  .cta-band p{color:var(--ink-soft);max-width:46ch;margin:0 auto 24px;}
+  .cta-band .btn{font-family:var(--mono);font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;padding:14px 26px;background:var(--gold);color:#0a0a0c;display:inline-block;transition:background .3s;}
+  .cta-band .btn:hover{background:var(--gold-bright);}
+  .related{margin:48px 0;}
+  .related h3{font-family:var(--mono);font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+  .related a{display:block;color:var(--ink-soft);padding:8px 0;border-bottom:1px solid var(--line-soft);border-radius:0;}
+  .related a:hover{color:var(--ink);}
+  footer{border-top:1px solid var(--line);background:var(--bg);padding:50px 0 38px;margin-top:60px;}
+  .foot-in{max-width:760px;margin:0 auto;padding:0 clamp(20px,5vw,40px);}
+  .foot-brand{display:flex;align-items:center;gap:13px;font-family:var(--serif);font-size:1.2rem;font-weight:600;margin-bottom:14px;}
+  .foot-brand .shield{width:26px;}
+  .foot-links{display:flex;gap:22px;flex-wrap:wrap;margin:18px 0;font-size:.88rem;}
+  .foot-links a{color:var(--ink-soft);}
+  .foot-links a:hover{color:var(--gold);}
+  .foot-bottom{border-top:1px solid var(--line-soft);padding-top:22px;font-size:.8rem;color:var(--ink-faint);}
+  @media(max-width:620px){.post-hero{padding:120px 0 20px;}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <linearGradient id="goldgrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e7c25a"/><stop offset="55%" stop-color="#c9a23a"/><stop offset="100%" stop-color="#8c6f24"/></linearGradient>
+  <symbol id="shield" viewBox="0 0 100 110">
+    <path d="M50 3 L93 17 V53 C93 79 72 98 50 107 C28 98 7 79 7 53 V17 Z" fill="url(#goldgrad)" stroke="#f0d77a" stroke-width="1.2"/>
+    <g fill="#14110b">
+      <rect x="46" y="27" width="8" height="56"/><rect x="24" y="51" width="52" height="8"/>
+      <rect x="42" y="25" width="16" height="3"/><rect x="42" y="82" width="16" height="3"/>
+      <rect x="22" y="49" width="3" height="12"/><rect x="75" y="49" width="3" height="12"/>
+      <g><rect x="32" y="37" width="3" height="9"/><rect x="29.5" y="39.5" width="8" height="3"/><rect x="65" y="37" width="3" height="9"/><rect x="62.5" y="39.5" width="8" height="3"/><rect x="32" y="65" width="3" height="9"/><rect x="29.5" y="67.5" width="8" height="3"/><rect x="65" y="65" width="3" height="9"/><rect x="62.5" y="67.5" width="8" height="3"/></g>
+    </g>
+  </symbol>
+</defs></svg>
+
+<header id="hdr">
+  <div class="nav">
+    <a href="/" class="brand"><svg class="shield"><use href="#shield"/></svg><span>Connor <span class="macivor">MacIvor</span><small>AI With Honor</small></span></a>
+    <a href="/#book" class="btn">Book Connor</a>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+  <div class="post-hero">
+    <div class="crumb"><a href="/">Home</a> / <a href="/blog/">Field Notes</a> / Is Your AI Reading Your Ideas</div>
+    <h1>Is Your AI Reading Your Ideas? <em>What Is Real, What Is Hype</em></h1>
+    <div class="post-meta">
+      <span>By Connor <span class="macivor">MacIvor</span></span>
+      <span class="dot">&bull;</span>
+      <span>July 6, 2026</span>
+      <span class="dot">&bull;</span>
+      <span>AI For The Rest Of Us</span>
+      <span class="dot">&bull;</span>
+      <span>9 min read</span>
+    </div>
+  </div>
+
+  <div class="video-frame">
+    <iframe src="https://www.loom.com/embed/86b5a5294e9544778e4ae7793b9f59e4" title="The Shopping Cart Test: A Retired Cop on Safety, AI, and Getting Played" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+  <div class="tldr">
+    <h2>TL;DR</h2>
+    <p>A new fear is making the rounds: that when you use a public AI to work out an idea, the company can see your intellectual property and move on it before you do. Here is the honest read from someone who deploys these tools every day. The scary version, a lab stealing your car-wash idea and cornering the market, mostly does not survive contact with the real world. The true part underneath it is plain: nothing you type into a public tool is private, so guard your crown jewels. Meanwhile the data-center story just flipped, the labs are renting compute instead of only building it, and a fresh pitch wants you to spend real money on your own AI machine at home while memory prices climb. Use the tool hard for what is not sensitive. Keep the one idea that makes you special out of the public box.</p>
+  </div>
+
+  <article>
+    <p>There is a fear going around right now, and it is a good one to understand because it is half true, which is the most dangerous kind. The fear is this: you sit down with a public AI to develop an idea, you type it all out, and in doing so you hand the company a perfect map of your intellectual property. Your plan, your angle, the thing you have not built yet. And the worry is that the company sees it and beats you to it.</p>
+
+    <p>Let me give you the version people are passing around, then let me tell you what I actually think, because I run these tools inside real businesses all day.</p>
+
+    <h2>The Car Wash Story</h2>
+
+    <p>Say I decide to open a car wash. Not the most exciting example, I know, bear with me. I use a public model to design the operation, and somewhere in there I come up with a genuinely new approach, something nobody has bolted onto a car wash before. The scary story says the lab watches me work it out, recognizes the idea, and within days has moved on it, and suddenly the big company owns car washes coast to coast while I am still deciding on a location.</p>
+
+    <p>Here is why that specific movie mostly does not play. In the physical world you still have to build the thing. Land, permits, equipment, staff, a town that wants a car wash. A giant lab is not going to abandon its trillion-dollar trajectory to go pour concrete on your idea. The extrapolation is fun to be scared by, and in the world of atoms it is thin.</p>
+
+    <blockquote><p>The scary version dies in the physical world. The true version lives in the digital one: whatever you type into a public tool, you no longer hold alone.</p></blockquote>
+
+    <p>But do not toss the whole thing out, because the true part matters. If your idea lives entirely in software, in prompts, in data, in a process that can be copied without a single permit, then yes, the input you typed is now sitting on someone else's servers. Maybe nobody ever looks at it. But you gave up sole custody the moment you pressed enter. That is not a reason to stop using AI. It is a reason to be deliberate about what you feed the public version of it.</p>
+
+    <h2>Privacy Already Left The Building</h2>
+
+    <p>And let us be honest about where the starting line actually is. None of this is new. The entire public internet was already scraped to train these models. Our chats, our posts, our years of typing into boxes, most of it went in. I have a room full of devices that are listening even while they look asleep, because I can call one by name and it wakes up, which means it was waiting for the call the whole time. Your phone, your smart TV, the camera, the laptop, every one of them came with a 50-page agreement you signed and did not read. Neither did I.</p>
+
+    <p>So when someone leans in and warns you the AI might see your stuff, the fair response is that the barn door has been open for a long time. The labs are even running out of fresh human data to train on, so now they are generating their own synthetic data to keep feeding the machines. Privacy, in the everyday sense most people mean, is not a thing you are protecting. It is a thing you are managing. Those are different jobs.</p>
+
+    <h2>The Reversal Nobody Expected</h2>
+
+    <p>Here is the part that tells you how fast this whole field moves. For two years the gospel was that everyone had to build out gigantic data centers, more compute, more energy, more everything. Now that story is quietly running backward. Companies sitting on all that compute are renting it out to the labs that want it, and the market liked it, the stock went up. Which makes you wonder whether all the money shoveled into building it was ever going to be needed at the scale promised. Maybe the next leap toward something like superintelligence is not another city of chips. Maybe it is one or two good ideas, a better design, a clever wrapper on what already exists. If that is true, the road is shorter and faster than the build-everything crowd wants to admit.</p>
+
+    <h2>Then Comes The Pitch</h2>
+
+    <p>And right on cue, into that fear walks a sales pitch: buy your own AI. Get one of the new little AI boxes, or a Mac with unified memory, or a PC with a top-tier graphics card, and run a model that never leaves your house, so nobody can read your ideas. For some people and some genuinely sensitive work, that is a smart move, and I am glad the option exists.</p>
+
+    <p>But watch the whole board. The same industry now telling us it needs less data-center capacity is also part of why the memory and chips those home machines depend on keep getting more expensive. Prices on the good gear have jumped hundreds of dollars a unit, when you can even find it. So you are being made nervous about your ideas, and then sold the hardware that quietly costs more because of how the supply is being held. Convenient? On purpose? I am not going to pretend I know. I am telling you to keep both eyes open while people who profit from the fear explain the fear to you.</p>
+
+    <h2>What A Regular Person Actually Does</h2>
+
+    <p>Strip away the noise and the playbook is simple, and I use it myself:</p>
+
+    <ul>
+      <li><strong>Use public AI hard for what is not sensitive.</strong> Research, first drafts, summaries, learning, customer replies, the ninety percent of work that is not your secret sauce. This is where it earns its keep, and being scared of it here just costs you time and money.</li>
+      <li><strong>Keep your crown jewels out of the public box.</strong> The unfiled invention, the real numbers, the one idea that makes you special. Either keep it out entirely, use an enterprise tier that contractually will not train on your data, or run it locally.</li>
+      <li><strong>Buy hardware for a reason, not a headline.</strong> A local model makes sense if you actually handle sensitive material. It does not make sense just because a scary video told you to spend.</li>
+    </ul>
+
+    <p>Use the machine to think and to build. Just do not confess to it the one thing you would not say out loud in a crowded room. That is the whole discipline, and it keeps you both safe and moving, which is exactly where a regular person wants to be with this technology.</p>
+  </article>
+
+  <div class="cta-band">
+    <h2>AI for everyone. <em>Used on purpose, not out of fear.</em></h2>
+    <p>I deploy AI in real businesses every day and teach the people the 20-year-olds skipped. Keynotes, team training, and plain-language advisory for folks who want the truth without the hype or the panic.</p>
+    <a href="/#book" class="btn">Bring me to your stage</a>
+  </div>
+
+  <div class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <details><summary>Can AI companies actually steal my business idea?</summary><p>The fear being sold is that when you develop an idea inside a public model, the company behind it can see your intellectual property and act on it before you do. In the physical world, where you still have to build the thing, that mostly does not play out like the scary version. What is true and worth acting on is simpler: anything you type into a public tool is not private. Keep genuinely sensitive plans out of public AI, and treat everything you enter as if it were logged, because it may well be.</p></details>
+    <details><summary>Is anything I type into ChatGPT, Claude, or Gemini private?</summary><p>Treat it as not private, even in incognito or private chat modes. The entire public internet was already scraped to train these systems, the labs are now short on fresh data and generating synthetic data to keep training, and you signed lengthy terms for nearly every device and app you own without reading them. Privacy in the everyday sense already left the building. The move is to be deliberate about what you feed a public tool, not to panic.</p></details>
+    <details><summary>What is the AI data-center reversal?</summary><p>For a couple of years the story was that everyone had to build enormous data centers full of compute. Now some of the companies sitting on that compute are renting it out to the AI labs instead, and the market rewarded the move. It raises a real question about whether all the money poured into building it out was necessary, and whether the next leap in AI is more rooms full of chips or just one or two better ideas and smarter designs.</p></details>
+    <details><summary>Should I buy my own AI machine to run at home?</summary><p>For some people and some sensitive work, a local model on your own hardware makes real sense, because your inputs never leave the house. But notice the pattern before you spend. The same industry telling us it needs less data-center capacity is also part of why the memory and chips those home machines depend on keep getting more expensive. Decide based on whether you actually handle sensitive data, not because a fear headline told you to buy hardware.</p></details>
+    <details><summary>How should a small business use public AI safely?</summary><p>Use it heavily for the work that is not sensitive: research, drafts, summaries, customer replies, learning. For the crown-jewel material, your secret formula, unfiled inventions, client financials, either keep it out of public tools entirely or use an enterprise tier with a no-training data agreement, or run a local model. The rule of thumb is to use the machine to think and build, without confessing to it the one thing that makes you special.</p></details>
+  </div>
+
+  <div class="related">
+    <h3>Keep Reading</h3>
+    <a href="https://connorwithhonor.com/blog/2026-142-the-shopping-cart-test/" target="_blank" rel="noopener">The Shopping Cart Test &mdash; the full Daily Download episode</a>
+    <a href="/blog/what-is-ai-explained-in-plain-english/">What Is AI, Really? A Plain-English Guide</a>
+    <a href="/blog/ai-is-not-a-neutral-judge/">AI Is Not a Neutral Judge</a>
+    <a href="/blog/">&larr; All Field Notes</a>
+  </div>
+</div>
+</main>
+
+<footer>
+  <div class="foot-in">
+    <div class="foot-brand"><svg class="shield"><use href="#shield"/></svg><span>Connor <span class="macivor">MacIvor</span></span></div>
+    <p style="color:var(--ink-soft);max-width:40ch;font-size:.92rem;">AI for everyone. Not just the wealthy.</p>
+    <div class="foot-links">
+      <a href="/">Home</a><a href="/blog/">Field Notes</a><a href="/#method">How I Think</a><a href="/#book">Book Connor</a>
+      <a href="https://www.youtube.com/@ConnorMacIvor" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://connorwithhonor.com" target="_blank" rel="noopener">connorwithhonor.com</a>
+    </div>
+    <div class="foot-bottom">&copy; 2026 Connor <span class="macivor">MacIvor</span>. Santa Clarita, CA. Call or text (661) 400-1720. A human answers.</div>
+  </div>
+</footer>
+
+<script>
+  const hdr=document.getElementById('hdr');
+  addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>40));
+</script>
+<script src="https://api.honorelevate.com/js/form_embed.js"></script>
+</body>
+</html>
